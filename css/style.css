@@ -12,9 +12,6 @@
     src: url(../fonts/Afacad-VariableFont_wght.ttf);
 }
 
-body{
-    font-family: "Afacad";
-}
 
 /**** ****/
 
@@ -22,6 +19,14 @@ body{
 
 .hidden{
     display: none!important;
+}
+
+body{
+    font-family: "Afacad";
+}
+
+body a{
+    scroll-behavior: smooth;
 }
 
 /**** ****/
@@ -276,9 +281,9 @@ search form button{
 
 /**** Section listing recettes *****/
 
-#listing_recettes{
+/* #listing_recettes{
     height: 2500px;
-}
+} */
 
 /** Bloc titre **/
 
@@ -501,3 +506,109 @@ search form button{
 }
 
 /** **/
+
+/**** Section video ****/
+
+.short_video{
+    margin: 150px 10%;
+}
+
+.short_text{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.short_text h2{
+    font-weight: 700;
+    font-size: 105px;
+    color: #EF872D;
+}
+
+.short_text img{
+    width: 100px;
+    margin: 0 25px 35px 25px;
+    transform: scale(-1, 1);
+}
+
+.short_wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.short_wrapper .video img{
+    width: 275px;
+}
+
+.short_wrapper .video{
+    position: relative;
+}
+
+.short_wrapper .video_favori{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20px);
+    margin: 0;
+}
+
+/**** ****/
+
+/**** Bloc Newsletter ****/
+
+.newsletter{
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+}
+
+.news_wrapper{
+    padding: 25px 35px;
+    border-radius: 25px 0 25px 25px;
+    width: 60%;
+    background-color: #EF872D;
+    text-align: center;
+}
+
+.news_wrapper p{
+    margin: 25px 85px;
+    font-weight: 700;
+    font-size: 35px;
+    color: white;
+}
+
+.news_wrapper form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.news_wrapper form input{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.news_wrapper button{
+    margin-left: 25px;
+    padding: 6px 20px;
+    border: 3px solid white;
+    border-radius: 25px 0 25px 25px;
+    font-size: 20px;
+    color: white;
+    background-color: #EF872D;
+    cursor: pointer;
+}
+
+.news_wrapper button:hover{
+    background-color: white;
+    color: #EF872D;
+}
+
+/**** ****/

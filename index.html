@@ -74,7 +74,7 @@
             </div>
 
             <div class="element_scroll">
-                <a href="">Scroll <br/> <i class="fa-solid fa-arrow-down"></i></a>
+                <a href="#listing_recettes">Scroll <br/> <i class="fa-solid fa-arrow-down"></i></a>
             </div>
 
         </section>
@@ -102,19 +102,19 @@
                 </search>
 
                 <div class="tag_filter_btn">
-                    <button id="afficherFiltreTag">Afficher les filtres</button>
+                    <button id="afficherFiltreTag">Choose your filter</button>
                 </div>
 
                 <div class="select_filter_btn">
                     <div class="btn_text_select">
-                        <p>Tirer par: </p>
+                        <p>Sort by: </p>
                     </div>
                     <select name="sort_by" id="sort_by">
-                        <option value="sort_by_none">--Veuillez choisir une option--</option>
+                        <option value="sort_by_none">--Choose an option--</option>
                         <option value="sort_by_date">🕒 Date</option>
-                        <option value="sort_by_rate">⭐ Évaluation</option>
-                        <option value="sort_by_asc">⬆️ Ordre Croissant</option>
-                        <option value="sort_by_desc">⬇️ Ordre Décroissant</option>
+                        <option value="sort_by_rate">⭐ Rating</option>
+                        <option value="sort_by_asc">⬆️ Ascending</option>
+                        <option value="sort_by_desc">⬇️ Descending</option>
                     </select>
                 </div>
 
@@ -284,7 +284,7 @@
                         <img src="img/recettes/img_recette.png" alt="photo de la recette">
                     </div>
                     <div class="card_favori">
-                         <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                     <div class="card_note">
                         <i class="fa-regular fa-star"></i>
@@ -305,13 +305,81 @@
             <!-- Bouton créer une recette -->
 
             <div class="btn_creer_recette">
-                <a href="#">Ajouter votre recette</a>
+                <a href="#">Add your recipe</a>
             </div>
 
         </section>
 
+        <section id="short_video" class="short_video">
 
+            <!-- ajouter slider -->
 
+            <div class="short_text">
+                <h2>Our Short</h2>
+                <img src="img/img_titre_recette.png" alt="image titre video">
+            </div>
+
+            <div class="short_wrapper">
+                <div class="video">
+                    <!-- modifier pour ajouter video -->
+                    <img src="img/img_video.png"></img>
+                    <div class="card_favori video_favori">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <!-- modifier pour ajouter video -->
+                    <img src="img/img_video.png"></img>
+                    <div class="card_favori video_favori">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <!-- modifier pour ajouter video -->
+                    <img src="img/img_video.png"></img>
+                    <div class="card_favori video_favori">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <!-- modifier pour ajouter video -->
+                    <img src="img/img_video.png"></img>
+                    <div class="card_favori video_favori">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="video">
+                    <!-- modifier pour ajouter video -->
+                    <img src="img/img_video.png"></img>
+                    <div class="card_favori video_favori">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                
+            </div>
+
+        </section>
+
+        <section id="newsletter" class="newsletter">
+
+            <div class="news_wrapper">
+
+                <p>
+                    Be the first to know about the latest deals, receive new trending recipes & more !
+                </p>
+
+                <form>
+                    <input type="mail" id="newsletter" name="newsletter" placeholder="Email ...">
+                    <button type="submit">Send</button>
+                </form>
+
+            </div>
+
+        </section>
 
     </main>
 
