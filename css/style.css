@@ -722,3 +722,28 @@ footer{
 
 
 /**** ****/
+
+/***** Page All Recipe *****/
+
+.allrecipe_titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.allrecipe_titre p{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/**** ****/
+
+/***** Page connexion / inscription *****/
+
+.wrapper_connexion{
+    display: flex;
+    align-items: center;
+}
+
+/**** ****/
