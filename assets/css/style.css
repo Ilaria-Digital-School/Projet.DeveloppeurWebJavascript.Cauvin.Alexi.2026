@@ -29,6 +29,20 @@ body a{
     scroll-behavior: smooth;
 }
 
+input{
+    margin-right: -15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #D9D9D9;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+input:focus{
+    outline: none;
+}
+
 /**** ****/
 
 /**** Header - Navigation  ****/
@@ -109,15 +123,9 @@ search form{
 }
 
 search form input{
-    margin-right: -15px;
-    padding: 8px 20px;
-    border: none;
     border-radius: 25px 0 0 25px;
     width: 15vw;
     height: 35px;
-    background-color: #D9D9D9;
-    font-weight: 500;
-    font-size: 15px;
 }
 
 search form input:focus{
@@ -745,6 +753,110 @@ footer{
 .wrapper_connexion{
     display: flex;
     align-items: center;
+}
+
+/**** ****/
+
+/***** Page contact *****/
+
+#contact{
+    /* height: 90vh; */
+}
+
+.contact_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 10%;
+}
+
+.contact_text_wrapper{
+    order: 1;
+    margin: 5% 0 5% 10%;
+    width: 50%;
+}
+
+.contact_text_wrapper h1{
+    font-size: 105px;
+    color:#EF872D;
+}
+
+.contact_text_wrapper p{
+    margin: 25px 0;
+    font-size: 18px;
+}
+
+.contact_text_wrapper p span{
+    display: block;
+    margin-bottom: -10px;
+    font-size: 25px;
+    font-weight: 600;
+    color:#EF872D;
+}
+
+
+.contact_form_wrapper{
+    order: 2;
+    margin: 7% 10%;
+    width: 50%;
+}
+
+.contact_form_wrapper form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact_form_wrapper form input{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 25px 0 25px 25px;
+    font-family: "Afacad";
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px 0px #ababab;
+}
+
+.contact_form_wrapper form textarea{
+    margin: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px 0 25px 25px;
+    background-color: #D9D9D9;
+    font-family: "Afacad";
+    font-weight: 500;
+    font-size: 15px;
+    min-height: 75px;
+    box-shadow: 0px 4px 4px 0px #ababab;
+}
+
+.contact_form_wrapper form textarea:focus{
+    outline: none;
+}
+
+.contact_form_btn_submit{
+    display: flex;
+    justify-content: end;
+}
+
+.contact_form_wrapper form .submit_btn{
+    margin: 25px 0 0 0;
+    padding: 6px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 25px;
+    background: none;
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: #EF872D;
+    cursor: pointer;
+}
+
+.contact_form_wrapper form .submit_btn:hover{
+    background-color: #EF872D;
+    color: white;
 }
 
 /**** ****/
