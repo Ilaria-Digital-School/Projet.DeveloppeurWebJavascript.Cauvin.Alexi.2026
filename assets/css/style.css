@@ -1,0 +1,750 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/**** Font ****/
+
+@font-face{
+    font-family: 'Afacad';
+    src: url(../fonts/Afacad-VariableFont_wght.ttf);
+}
+
+
+/**** ****/
+
+/**** Class outils ****/
+
+.hidden{
+    display: none!important;
+}
+
+body{
+    font-family: "Afacad";
+}
+
+body a{
+    scroll-behavior: smooth;
+}
+
+/**** ****/
+
+/**** Header - Navigation  ****/
+
+/** Bloc decoration home page **/
+
+.deco_img_header{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.deco_img_header img:nth-child(1){
+    width: 275px;
+}
+
+.deco_img_header img:nth-child(2){
+    margin: -15px 25px;
+}
+
+/** **/
+
+/** Bloc Navigation **/
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5vh 0;
+    padding: 15px 30px;
+    width: 77%;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+    z-index: 100000000;
+}
+
+.nav_link{
+    display: flex;
+    align-items: center;
+}
+
+.nav_link img{
+    width: 35px;
+    margin-right: 15px;
+}
+
+.nav_link a{
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+
+.nav_link a:hover, .nav_link a:focus{
+    color: #EF872D;
+}
+
+.nav_interact{
+    display: flex;
+    align-items: center;
+}
+
+.nav_interact search{
+    margin: 0 20px;
+}
+
+search form{
+    display: flex;
+    align-items: center;
+}
+
+search form input{
+    margin-right: -15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    width: 15vw;
+    height: 35px;
+    background-color: #D9D9D9;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+search form input:focus{
+    outline: none;
+}
+
+search form input::placeholder{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+search form button{
+    padding: 0 15px;
+    border: none;
+    border-radius: 25px 0 25px 25px;
+    height: 35px;
+    font-size: 20px;
+    color: white;
+    background-color: #EF872D;
+    cursor: pointer;
+}
+
+.nav_sign{
+    margin: 0 15px;
+    padding: 5px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.nav_sign a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #EF872D;
+}
+
+.nav_sign:hover{
+    background-color: #EF872D;
+}
+
+.nav_sign:hover a{
+    color: white;
+}
+
+.nav_user_connected a{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;;
+    text-decoration: none;
+}
+
+.nav_user_connected a p{
+    margin-right: 15px;;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav_user_connected a img{
+    width: 50px;
+    height: 50px;
+    background-color: #EF872D;
+    border-radius: 50%;;
+}
+
+/** **/
+
+/**** ****/
+
+/**** Main ****/
+
+/**** Section Accueil ****/
+
+.accueil{
+    background-image: url("../img/bg_accueil.png");
+}
+
+.img_accueil{
+    display: flex;
+    justify-content: center;
+}
+
+.img_wrapper{
+    position: relative;
+    margin-top: 20vh;
+    width: 80%;
+}
+
+.img_wrapper img{
+    width: 100%;
+}
+
+.img_accueil_text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.img_accueil_text h1{
+    font-weight: 700;
+    font-size: 105px;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.84)
+}
+
+.img_accueil_text p{
+    font-weight: 500;
+    font-size: 25px;
+    width: 40%;
+    color: white;
+}
+
+.btn_sign {
+    margin: 35px 0;
+    padding: 5px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 25px;
+    width: 7%;
+    text-align: center;
+}
+
+.btn_sign a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    color: #EF872D; 
+}
+
+.element_scroll{
+    position: relative;
+    top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+    cursor: pointer;
+}
+
+.element_scroll a{
+    padding: 10px;
+    border: 3px solid #EF872D;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    color: #EF872D;
+    z-index: 15;
+}
+
+/**** ****/
+
+/**** Section listing recettes *****/
+
+/* #listing_recettes{
+    height: 2500px;
+} */
+
+/** Bloc titre **/
+
+.recettes_titre{
+    display: flex;
+    align-items: end;
+    margin: 5% 17%;
+}
+
+.recettes_titre img{
+    width: 100px;
+    margin: 0 25px 35px 25px;
+}
+
+.recettes_titre h2{
+    font-weight: 700;
+    font-size: 105px;
+    color: #EF872D;
+}
+
+/** **/
+
+
+/** Bloc Filtres **/
+
+.filtres_homepage{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5vh auto;
+    padding: 15px 30px;
+    width: max-content;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+}
+
+.tag_filter_btn{
+    margin: 0 55px;
+}
+
+.tag_filter_btn button{
+    padding: 6px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 25px;
+    background: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #EF872D;
+    cursor: pointer;
+}
+
+.tag_filter_btn button:hover{
+    background-color: #EF872D;
+    color: white;
+}
+
+.select_filter_btn{
+    display: flex;
+    align-items: center;
+}
+
+.btn_text_select{
+    padding: 10px 25px;
+    border-radius: 25px 0 0 25px;
+    background-color: #EF872D;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+}
+
+.select_filter_btn select{
+    margin: 0 0 0 -15px;
+    padding: 8px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 0 25px 25px 0;
+    background-color: white;
+    font-weight: 500;
+    font-size: 18px;
+    color: #EF872D;
+    cursor: pointer;
+}
+
+.select_filter_btn select:focus-visible{
+    outline: none;
+}
+
+.wrapper_tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 10%;;
+}
+
+.tag{
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.tag:first-child{
+    margin-left: 0;
+}
+
+.tag:last-child{
+    margin-right: 0;
+}
+
+.tag img{
+    padding: 15px;
+    border-radius: 15px;
+    width: 50px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+}
+
+.tag img:hover{
+    background-color: #EF872D;
+}
+
+.tag img:focus{
+    background-color: #EF872D;
+}
+
+.tag h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    color: #EF872D;
+}
+
+/** **/
+
+/** Cards Recettes **/
+
+.wrapper_recipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 100px 10%;
+}
+
+.card_recette{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+    cursor: pointer;
+    text-decoration: none;;
+}
+
+.card_img img{
+    width: 325px;
+}
+
+.card_favori{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -5px 0 20px 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+    font-size: 20px;
+    color: #CA5D5D;
+    cursor: pointer;
+}
+
+.card_note{
+    font-size: 20px;
+    color: #F4D45A;
+    cursor: pointer; 
+}
+
+.card_text{
+    margin: 15px;
+    text-align: center;
+    color: black;
+}
+
+.card_text h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.card_text p{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/** **/
+
+/** Bouton ajout recette **/
+
+.btn_creer_recette{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.btn_creer_recette a{
+    padding: 7px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 25px;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    color: #EF872D;
+}
+
+.btn_creer_recette a:hover{
+    background-color: #EF872D;
+    color: white;
+}
+
+/** **/
+
+/**** Section video ****/
+
+.short_video{
+    margin: 150px 10%;
+}
+
+.short_text{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.short_text h2{
+    font-weight: 700;
+    font-size: 105px;
+    color: #EF872D;
+}
+
+.short_text img{
+    width: 100px;
+    margin: 0 25px 35px 25px;
+    transform: scale(-1, 1);
+}
+
+.short_wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.short_wrapper .video img{
+    width: 275px;
+}
+
+.short_wrapper .video{
+    position: relative;
+}
+
+.short_wrapper .video_favori{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20px);
+    margin: 0;
+}
+
+/**** ****/
+
+/**** Bloc Newsletter ****/
+
+.newsletter{
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+}
+
+.news_wrapper{
+    padding: 25px 35px;
+    border-radius: 25px 0 25px 25px;
+    width: 60%;
+    background-color: #EF872D;
+    text-align: center;
+}
+
+.news_wrapper p{
+    margin: 25px 85px;
+    font-weight: 700;
+    font-size: 35px;
+    color: white;
+}
+
+.news_wrapper form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.news_wrapper form input{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.news_wrapper button{
+    margin-left: 25px;
+    padding: 6px 20px;
+    border: 3px solid white;
+    border-radius: 25px 0 25px 25px;
+    font-size: 20px;
+    color: white;
+    background-color: #EF872D;
+    cursor: pointer;
+}
+
+.news_wrapper button:hover{
+    background-color: white;
+    color: #EF872D;
+}
+
+/**** ****/
+
+/**** Footer ****/
+
+footer{
+    margin-top: 150px;
+    background-color: #303030;
+}
+
+.info_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 10%;
+    padding: 50px 0;
+    color: white;
+}
+
+.info_footer h4{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.mapping{
+    display: flex;
+    flex-direction: column;
+}
+
+.mapping a{
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.mapping a:hover{
+    color: #EF872D;
+}
+
+.info_contact_footer{
+    text-align: center;
+}
+
+.info_contact_footer p{
+    font-size: 20px;
+}
+
+.info_contact_footer p span{
+    display: block;
+    margin: 10px 0;
+    font-weight: 700;
+    color: #EF872D;
+}
+
+.info_contact_footer a{
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.info_contact_footer a:hover{
+    color: #EF872D;
+}
+
+.info_reseaux{
+    display: flex;
+    flex-direction: column;
+}
+
+.info_reseaux a{
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.info_reseaux a:hover{
+    color: #EF872D;
+}
+
+.info_legale{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #EF872D;
+    padding: 15px 10%;
+    color: white;
+}
+
+.info_legale p span{
+    font-weight: 700;
+}
+
+.info_legale a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.info_legale a:hover{
+    color: #EF872D;
+}
+
+
+/**** ****/
+
+/***** Page All Recipe *****/
+
+.allrecipe_titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.allrecipe_titre p{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/**** ****/
+
+/***** Page connexion / inscription *****/
+
+.wrapper_connexion{
+    display: flex;
+    align-items: center;
+}
+
+/**** ****/
