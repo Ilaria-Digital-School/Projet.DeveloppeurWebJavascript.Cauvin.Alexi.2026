@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DisHub</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     
     <main>
 
         <div id="wrapper_connexion" class="wrapper_connexion">
-            <div class="sign_in">
+            <div class="form_wrapper sign_up">
+                <form>
+                    <h1>Sign Up</h1>
+                    <div class="sign_reseau">
+                        <a href="#" class="link_reseau"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="link_reseau"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="link_reseau"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <p>or use your email for registration</p>
+                    <input type="text" id="signup_name" name="signup_name" placeholder="Name" aria-label="input pour le nom" />
+                    <input type="email" id="signup_email" name="signup_email" placeholder="Email" aria-label="input pour l'email" />
+                    <input type="password" id="signup_pwd" name="signup_pwd" placeholder="Password" aria-label="input pour le mot de passe" />
+                    <button class="btn_sign" aria-label="bouton inscription">Sign Up</button>
+                </form>
+                
+            </div>
+            <div class="form_wrapper sign_in">
                 <form>
                     <h1>Sign in</h1>
-                    <div class="signup_reseau">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <div class="sign_reseau">
+                        <a href="#" class="link_reseau"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="link_reseau"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="link_reseau"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <span>or use your account</span>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <p>or use your account</p>
+                    <input type="email" id="signin_email" name="signin_email" placeholder="Email" aria-label="input pour email"/>
+                    <input type="password" id="signin_pwd" name="signin_pwd" placeholder="Password" aria-label="input pour mdp"/>
                     <a href="#">Forgot your password?</a>
-                    <button>Sign In</button>
-                </form>
-            </div>
-            <div class="sign_up">
-                <form>
-                    <h1>Create Account</h1>
-                    <div class="signin_reseau">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                    <span>or use your email for registration</span>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button>Sign Up</button>
+                    <button class="btn_sign" aria-label="bouton connexion">Sign In</button>
                 </form>
             </div>
             <div class="overlay_wrapper">
@@ -46,12 +47,12 @@
                     <div class="overlay_panel overlay_left">
                         <h1>Welcome Back!</h1>
                         <p>To keep connected with us please login with your personal info</p>
-                        <button class="ghost" id="signIn">Sign In</button>
+                        <button id="showSignIn" class="overlay_btn" type="button">Sign In</button>
                     </div>
                     <div class="overlay_panel overlay_right">
                         <h1>Hello, Friend!</h1>
                         <p>Enter your personal details and start journey with us</p>
-                        <button class="ghost" id="signUp">Sign Up</button>
+                        <button id="showSignUp" class="overlay_btn" type="button">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -60,7 +61,7 @@
     </main>
 
 
-    <script src="js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script src="https://kit.fontawesome.com/c970b44775.js" crossorigin="anonymous"></script>
 </body>
 </html>
