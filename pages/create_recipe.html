@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bievenue sur DisHub, le site de partage de recette collaboratif" />
+    <title>DisHub</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+
+    <header>
+
+        <!-- décoration image top -->
+
+        <div class="deco_img_header">
+            <img src="../img/header_ellipse.png" alt="Ellipse">
+            <img src="../img/header_ellipse_deux.png" alt="Ellipse">
+        </div>
+
+        <!-- Menu -->
+
+        <nav>
+            <div class="nav_link">
+                <img src="../img/logo_dishub.png" alt="logo DisHub">
+                <a href="/index.html">Home</a>
+                <a href="/pages/allrecipes.html">Recipe</a>
+                <a href="">Search</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="nav_interact">
+                <search>
+                    <form>
+                        <input type="search" id="nav_search" name="nav_search" placeholder="Research ..."
+                            aria-label="research your receipe" />
+                        <button type="submit" aria-label="research your receipe"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </search>
+                <div class="nav_sign">
+                    <a href="">Sign In</a>
+                </div>
+                <div class="nav_sign">
+                    <a href="">Sign Up</a>
+                </div>
+                <div class="nav_user_connected hidden">
+                    <a href="">
+                        <p>username</p>
+                        <img src="" alt="profile picture">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="create_recipe" class="create_recipe">
+
+            <h1>Shared <span>your</span> Recipe</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac aliquet nibh. Nunc nunc nunc, sagittis ac mattis at, tincidunt id metus.</p>
+
+            <form>
+
+                <div class="practical_infos">
+                    <h2 class="title_section_form">Pratical Informations </h2>
+
+                    <div class="wrapper_infos _time">
+                        <div class="infos_icon">
+                            <img src="../img/icon_create_recipe/icon_time.png" alt="Time for preparation">
+                        </div>
+                        <div class="infos_input">
+                            <label for="input_time">Time of prepartion</label>
+                            <input type="text" name="input_time" id="input_time" placeholder="Time ...">
+                        </div>
+                    </div>
+
+                    <div class="wrapper_infos _people">
+                        <div class="infos_icon">
+                            <img src="../img/icon_create_recipe/icon_people.png" alt="Number of people">
+                        </div>
+                        <div class="infos_input">
+                            <label for="input_people">Number of people</label>
+                            <input type="number" name="input_people" id="input_people" placeholder="Number of people ...">
+                        </div>
+                    </div>
+
+                    <div class="wrapper_infos _kcal">
+                        <div class="infos_icon">
+                            <img src="../img/icon_create_recipe/icon_kcal.png" alt="Kcal of the recipe">
+                        </div>
+                        <div class="infos_input">
+                            <label for="input_kcal">Number of kcal</label>
+                            <input type="number" name="input_kcal" id="input_kcal" placeholder="Number of Kcal ...">
+                        </div>
+                    </div>
+
+                    <div class="wrapper_infos _difficulties">
+                        <div class="infos_icon">
+                            <img src="../img/icon_create_recipe/iocn_difficulties.png" alt="Difficulties of the recipe">
+                        </div>
+                        <div class="infos_input">
+                            <label for="input_difficulties">Number of kcal</label>
+                            <select name="input_difficulties" id="input_difficulties">
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe_ingredient">
+                    <h2 class="title_section_form">Ingredients</h2>
+
+                    <div class="input_ingredient">
+                        <input type="text" name="ingredient" id="ingredient" placeholder="ingredient 1" aria-label="ingredient 1">
+                        <div class="input_ingredient_action">
+                            <button type="button" id="add_ingredient" class="add_ingredient" aria-label="add ingredient">Add</button>
+                            <button type="button" id="remove_ingredient" class="remove_ingredient" aria-label="remove ingredient">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe_instruction">
+                    <h2 class="title_section_form">Instructions</h2>
+                    <textarea name="instruction" id="instruction" placeholder="Instructions ..." aria-label="instructions for the recipe"></textarea>
+                </div>
+
+                <div class="add_tag_recipe">
+                    <h2 class="title_section_form">Click to add the tag</h2>
+
+                    <div class="add_tag_recipe_wrapper">
+                        <div class="tag">
+                            <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                            <h3>Pizzas</h3>
+                        </div>
+                        <div class="tag">
+                            <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                            <h3>Pizzas</h3>
+                        </div>
+                        <div class="tag">
+                            <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                            <h3>Pizzas</h3>
+                        </div>
+                        <div class="tag">
+                            <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                            <h3>Pizzas</h3>
+                        </div>
+                        <div class="tag">
+                            <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                            <h3>Pizzas</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publish_recipe">
+                    <button type="submit">Publish your recipe</button>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="info_footer">
+            <div class="mapping">
+                <h4>Pages</h4>
+                <a href="">Home</a>
+                <a href="">Recipe</a>
+                <a href="">Search</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="info_contact_footer">
+                <h4>Contact</h4>
+                <p>Contact us at this adress :</p>
+                <p><span>34 Avenue Jean Jaures, 90000 Belfort</span></p>
+                <p>or via email / phone</p>
+                <a href="mailto:contact@contact.com">contact@contact.com</a>
+                <a href="tel:+33 00 00 00 00">+33 00 00 00 00</a>
+            </div>
+
+            <div class="info_reseaux">
+                <h4>Réseaux</h4>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
+                        style="margin: 0 5px 0 0;"></i>Instagram</a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
+                        style="margin: 0 5px 0 0;"></i>Facebook</a>
+            </div>
+        </div>
+
+        <div class="info_legale">
+            <p><span>©DisHub</span> All rights reserved</p>
+            <a href="">Mentions légales</a>
+        </div>
+
+    </footer>
+
+
+    <script src="../assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/c970b44775.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -732,22 +732,6 @@ footer{
 
 /**** ****/
 
-/***** Page All Recipe *****/
-
-.allrecipe_titre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 250px;
-}
-
-.allrecipe_titre p{
-    margin-top: 15px;
-    font-size: 20px;
-}
-
-/**** ****/
-
 /***** Page connexion / inscription *****/
 
 .wrapper_connexion{
@@ -966,11 +950,193 @@ footer{
 
 /**** ****/
 
-/***** Page contact *****/
+/***** Page All Recipe *****/
 
-#contact{
-    /* height: 90vh; */
+.allrecipe_titre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
 }
+
+.allrecipe_titre p{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/**** ****/
+
+/***** Page Recipe *****/
+
+.create_recipe{
+    margin: 10%;
+}
+
+.create_recipe h1{
+    font-size: 105px;
+    font-weight: 700;
+    text-align: center;
+    color: #EF872D;
+}
+
+.create_recipe h1 span{
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.create_recipe p{
+    margin-bottom: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.title_section_form{
+    font-size: 45px;
+    font-weight: 700;
+    color: #EF872D;
+}
+
+.wrapper_infos{
+    display: flex;
+    align-items: center;
+    margin: 55px 0;
+}
+
+.infos_icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 1px #ababab;
+}
+
+.infos_icon img{
+    width: 35px;
+}
+
+.infos_input{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+.infos_input label{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.infos_input input{
+    border-radius: 25px 0 25px 25px;
+    min-width: 350px;
+    font-family: "Afacad";
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px 0px #ababab;
+}
+
+.infos_input select{
+    padding: 8px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 15px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 18px;
+    color: #EF872D;
+    cursor: pointer;
+}
+
+.infos_input select:focus{
+    outline: none;
+}
+
+.input_ingredient{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: 20px 0;
+}
+
+.input_ingredient input{
+    margin: 15px 0;
+    border-radius: 25px 0 25px 25px;
+    min-width: 350px;
+    font-family: "Afacad";
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px 0px #ababab;
+}
+
+.input_ingredient button{
+    margin-top: 15px;;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 18px;
+    width: auto;
+    text-align: center;
+    color: #EF872D;
+    box-shadow: 0px 4px 4px 0px #ababab;
+    cursor: pointer;
+}
+
+.input_ingredient button:nth-last-child(odd){
+    margin-left: 20px;
+}
+
+.input_ingredient button:hover{
+    background-color: #EF872D;
+    color: white;
+}
+
+.recipe_instruction textarea{
+    margin: 25px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 25px 0 25px 25px;
+    background-color: #D9D9D9;
+    font-family: "Afacad";
+    font-weight: 500;
+    font-size: 15px;
+    width: 800px;
+    min-height: 125px;
+    box-shadow: 0px 4px 4px 0px #ababab;
+}
+
+.recipe_instruction textarea:focus{
+    outline: none;
+}
+
+.add_tag_recipe_wrapper{
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.publish_recipe{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;;
+}
+
+.publish_recipe button{ 
+    padding: 7px 25px;
+    border: 3px solid #EF872D;
+    border-radius: 25px;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #EF872D;
+}
+
+/**** ****/
+
+/***** Page contact *****/
 
 .contact_wrapper{
     display: flex;
