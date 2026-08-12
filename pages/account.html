@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bievenue sur DisHub, le site de partage de recette collaboratif" />
+    <title>DisHub</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+
+    <header>
+
+        <!-- décoration image top -->
+
+        <div class="deco_img_header">
+            <img src="../img/header_ellipse.png" alt="Ellipse">
+            <img src="../img/header_ellipse_deux.png" alt="Ellipse">
+        </div>
+
+        <!-- Menu -->
+
+        <nav>
+            <div class="nav_link">
+                <img src="../img/logo_dishub.png" alt="logo DisHub">
+                <a href="#">Home</a>
+                <a href="../pages/allrecipes.html">Recipe</a>
+                <a href="">Search</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+            <div class="nav_interact">
+                <search>
+                    <form>
+                        <input type="search" id="nav_search" name="nav_search" placeholder="Research ..."
+                            aria-label="research your receipe" />
+                        <button type="submit" aria-label="research your receipe"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </search>
+                <div class="nav_sign">
+                    <a href="../pages/connexion.html">Sign In</a>
+                </div>
+                <div class="nav_sign">
+                    <a href="../pages/connexion.html">Sign Up</a>
+                </div>
+                <div class="nav_user_connected hidden">
+                    <a href="">
+                        <p>username</p>
+                        <img src="" alt="profile picture">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="account_infos" class="account_infos">
+
+            <h1>Your Account informations</h1>
+
+            <div class="wrapper_infos_account">
+
+                <div class="recap_infos">
+
+                    <div class="infos_photo_account">
+                        <img src="../img/profil/profil.png" alt="user photo account">
+                    </div>
+
+                    <div class="text_infos_account">
+
+                        <div class="email_infos text_infos">
+                            <h2>Email :</h2>
+                            <p>email@contact.com</p>
+                        </div>
+
+                        <div class="identifiant_infos text_infos">
+                            <h2>Identifier :</h2>
+                            <p>username identifier</p>
+                        </div>
+
+                        <div class="recipe_infos text_infos">
+                            <h2>Recipe shared :</h2>
+                            <p>10 recipe shared</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form_change_infos">
+
+                    <form>
+
+                        <h2>Change your Informations</h2>
+
+                        <div class="change_photo_account">
+                            <div class="photo_account infos_photo_account">
+                                <img src="../img/profil/profil.png" alt="recap photo account">
+                            </div>
+
+                            <div class="btn_change_photo_account">
+                                <button type="button" id="photo_profil_change" class="photo_profil_change" aria-label="Change your profil photo">Change your photo</button>
+                                <button type="button" id="remove_profil_photo" class="remove_profil_photo" aria-label="remove your profil photo">Remove your photo</button>
+                            </div>
+                        </div>
+
+                        <div class="input_account_changes">
+                            <input type="text" id="change_name" name="change_name" placeholder="Name" aria-label="input pour changer le nom" />
+                            <input type="email" id="change_email" name="change_email" placeholder="Email" aria-label="input pour changer l'email" />
+                            <input type="password" id="change_pwd" name="change_pwd" placeholder="Password" aria-label="input pour changer le mot de passe" />
+                            <input type="password" id="change_confirm_pwd" name="change_confirm_pwd" placeholder="Confirm your password" aria-label="input pour confirmer le mot de passe changer" />
+                            <div class="btn_save_changes">
+                                <button aria-label="bouton inscription">Saves changes</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="recipe_shared" class="recipe_shared">
+
+            <h2>Recipes Shared</h2>
+
+            <div class="wrapper_recipe_shared">
+                <div class="user_recipe_shared">
+                    <a href="../pages/create_recipe.html" class="btn_add_recipe_account card_recette">
+                        <div class="icon_btn_add_recipe">
+                            <span><i class="fa-solid fa-plus"></i></span>
+                        </div>
+                        <p>Shared your recipe</p>
+                    </a>
+                    <div class="user_recipe_shared_wrapper">
+                        <a href="#" class="card_recette">
+                            <div class="card_img">
+                                <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                            </div>
+
+                            <div class="card_text">
+                                <h2>Titre de la recette</h2>
+                                <p>Auteur de la recette</p>
+                            </div>
+                        </a>
+                        <div class="btn_recipe_modify">
+                            <button type="button">modify your recipe</button>
+                        </div>
+                    </div>
+                    <div class="user_recipe_shared_wrapper">
+                        <a href="#" class="card_recette">
+                            <div class="card_img">
+                                <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                            </div>
+
+                            <div class="card_text">
+                                <h2>Titre de la recette</h2>
+                                <p>Auteur de la recette</p>
+                            </div>
+                        </a>
+                        <div class="btn_recipe_modify">
+                            <button type="button">modify your recipe</button>
+                        </div>
+                    </div>
+                    <div class="user_recipe_shared_wrapper">
+                        <a href="#" class="card_recette">
+                            <div class="card_img">
+                                <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                            </div>
+
+                            <div class="card_text">
+                                <h2>Titre de la recette</h2>
+                                <p>Auteur de la recette</p>
+                            </div>
+                        </a>
+                        <div class="btn_recipe_modify">
+                            <button type="button">modify your recipe</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+        <section id="favorite_recipe" class="favorite_recipe">
+
+            <h2>Your favorite recipe</h2>
+
+            <div class="user_recipe_favorite">
+                <a href="#" class="card_recette">
+                    <div class="card_img">
+                        <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                    </div>
+                    <div class="card_favori" aria-label="favori button">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="card_note" aria-label="rating button">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card_text">
+                        <h2>Titre de la recette</h2>
+                        <p>Auteur de la recette</p>
+                    </div>                  
+                </a>
+                <a href="#" class="card_recette">
+                    <div class="card_img">
+                        <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                    </div>
+                    <div class="card_favori" aria-label="favori button">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="card_note" aria-label="rating button">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card_text">
+                        <h2>Titre de la recette</h2>
+                        <p>Auteur de la recette</p>
+                    </div>                  
+                </a>
+                <a href="#" class="card_recette">
+                    <div class="card_img">
+                        <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                    </div>
+                    <div class="card_favori" aria-label="favori button">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="card_note" aria-label="rating button">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card_text">
+                        <h2>Titre de la recette</h2>
+                        <p>Auteur de la recette</p>
+                    </div>                  
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="info_footer">
+            <div class="mapping">
+                <h4>Pages</h4>
+                <a href="">Home</a>
+                <a href="">Recipe</a>
+                <a href="">Search</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="info_contact_footer">
+                <h4>Contact</h4>
+                <p>Contact us at this adress :</p>
+                <p><span>34 Avenue Jean Jaures, 90000 Belfort</span></p>
+                <p>or via email / phone</p>
+                <a href="mailto:contact@contact.com">contact@contact.com</a>
+                <a href="tel:+3300000000">+33 00 00 00 00</a>
+            </div>
+
+            <div class="info_reseaux">
+                <h4>Réseaux</h4>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
+                        style="margin: 0 5px 0 0;"></i>Instagram</a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
+                        style="margin: 0 5px 0 0;"></i>Facebook</a>
+            </div>
+        </div>
+
+        <div class="info_legale">
+            <p><span>©DisHub</span> All rights reserved</p>
+            <a href="">Mentions légales</a>
+        </div>
+
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/c970b44775.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
