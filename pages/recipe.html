@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bievenue sur DisHub, le site de partage de recette collaboratif" />
+    <title>DisHub</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+
+    <header>
+
+        <!-- décoration image top -->
+
+        <div class="deco_img_header">
+            <img src="../img/header_ellipse.png" alt="Ellipse">
+            <img src="../img/header_ellipse_deux.png" alt="Ellipse">
+        </div>
+
+        <!-- Menu -->
+
+        <nav>
+            <div class="nav_link">
+                <img src="../img/logo_dishub.png" alt="logo DisHub">
+                <a href="#">Home</a>
+                <a href="../pages/allrecipes.html">Recipe</a>
+                <a href="">Search</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+            <div class="nav_interact">
+                <search>
+                    <form>
+                        <input type="search" id="nav_search" name="nav_search" placeholder="Research ..."
+                            aria-label="research your receipe" />
+                        <button type="submit" aria-label="research your receipe"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </search>
+                <div class="nav_sign">
+                    <a href="../pages/connexion.html">Sign In</a>
+                </div>
+                <div class="nav_sign">
+                    <a href="../pages/connexion.html">Sign Up</a>
+                </div>
+                <div class="nav_user_connected hidden">
+                    <a href="">
+                        <p>username</p>
+                        <img src="" alt="profile picture">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="the_recipe" class="the_recipe">
+
+            <div class="img_the_recipe">
+                <img src="../img/img_recipe.png" alt="image of the recipe">
+            </div>
+
+            <div class="card_the_recipe">
+
+                <div class="menu_the_recipe">
+                    <div class="print_the_recipe icon_menu_the_recipe">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <div class="shared_the_recipe icon_menu_the_recipe">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <div class="favorite_the_recipe icon_menu_the_recipe">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="intro_the_recipe">
+                    <h1 class="title_the_recipe">Pâtes Carbonara </h1>
+                    <p>By Patrick Patric</p>
+                    <div class="rate_the_recipe" aria-label="rating button">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>  
+
+                <div class="wrapper_infos_the_recipe">
+                    <div class="time_the_recipe item_infos_the_recipe">
+                        <div class="card_infos_the_recipe">
+                            <img src="../img/icon_create_recipe/icon_time.png" alt="icon time of the recipe">
+                        </div>
+                        <p>30mn</p>
+                    </div>
+                    <div class="users_the_recipe item_infos_the_recipe">
+                        <div class="card_infos_the_recipe ">
+                            <img src="../img/icon_create_recipe/icon_people.png" alt="icon number of users of the recipe">
+                        </div>
+                        <p>4 peoples</p>
+                    </div>
+                    <div class="kcal_the_recipe item_infos_the_recipe">
+                        <div class="card_infos_the_recipe">
+                            <img src="../img/icon_create_recipe/icon_kcal.png" alt="icon number of kcal of the recipe">
+                        </div>
+                        <p>500 Kcal</p>
+                    </div>
+                    <div class="diff_the_recipe item_infos_the_recipe">
+                        <div class="card_infos_the_recipe">
+                            <img src="../img/icon_create_recipe/iocn_difficulties.png" alt="icon Difficulties of the recipe">
+                        </div>
+                        <p>Easy</p>
+                    </div>
+                </div>
+
+                <div class="ingredient_the_recipe">
+                    <div class="ingredient_title_the_recipe">
+                        <div class="card_title_icon_ingredient">
+                            <img src="../img/icon_ingredient.png" alt="icon of the section of ingredients">
+                        </div>
+                        <h2>Ingredients</h2>
+                    </div>
+
+                    <div class="list_ingredient_the_recipe">
+                        <ul>
+                            <li class="item_list_ingredient">3 oeufs</li>
+                            <li class="item_list_ingredient">500gr of Spagethi</li>
+                            <li class="item_list_ingredient">150gr of Guancale</li>
+                            <li class="item_list_ingredient">300gr of Pecorino Romano</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="instruction_the_recipe">
+                    <div class="instruction_title_the_recipe">
+                        <div class="card_title_icon_ingredient">
+                            <img src="../img/icon_instruction.png" alt="icon of the section of the instruction">
+                        </div>
+                        <h2>Instructions</h2>
+                    </div>
+                    <div class="text_instruction_the_recipe">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.
+                            <br/><br/>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.
+                            <br/><br/>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.
+                            <br/><br/>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="wrapper_rating_the_recipe">
+                    <div class="text_rating_the_recipe">
+                        <p>Rate this recipe:</p>
+                    </div>
+                    <div class="img_rating_the_recipe">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="comments_the_recipe" class="comments_the_recipe">
+
+            <div class="title_comments_the_recipe">
+                <img src="../img/img_title_comments.png" alt="image title comments">
+                <h3>Comments</h3>
+            </div>
+
+            <div class="wrapper_comments">
+
+                <div class="card_comments">
+                    <div class="card_comments_header">
+                        <div class="avatar">
+                            <img src="../img/profil/profil.png" alt="avatar">
+                        </div>
+                        <div class="user_infos_comments">
+                            <p>Name User</p>
+                            <p><i>12 days ago</i></p>
+                        </div>
+                    </div>
+                    <div class="text_comments">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis aut voluptas nostrum eum vero enim, laboriosam illo et voluptatem cumque distinctio itaque quasi non nulla. Quia soluta cum ut a.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis aut voluptas nostrum eum vero enim, laboriosam illo et voluptatem cumque distinctio itaque quasi non nulla. Quia soluta cum ut a.
+                        </p>
+                    </div>
+                    <div class="option_comments">
+                        <div class="respond_comments item_icon_comments">
+                            <i class="fa-solid fa-reply"></i>
+                        </div>
+                        <div class="report_comments item_icon_comments">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="more_recipes" class="more_recipes">
+
+            <div class="title_more_recipes">
+                <img src="../img/img_titre_recette.png" alt="image more recipe">
+                <h3>More Recipes</h3>
+            </div>
+
+            <div class="wrapper_more_recipes">
+                <a href="#" class="card_recette">
+                    <div class="card_img">
+                        <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                    </div>
+                    <div class="card_favori" aria-label="favori button">
+                         <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="card_note" aria-label="rating button">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card_text">
+                        <h2>Titre de la recette</h2>
+                        <p>Auteur de la recette</p>
+                    </div>                  
+                </a>
+
+                <a href="#" class="card_recette">
+                    <div class="card_img">
+                        <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                    </div>
+                    <div class="card_favori" aria-label="favori button">
+                         <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="card_note" aria-label="rating button">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card_text">
+                        <h2>Titre de la recette</h2>
+                        <p>Auteur de la recette</p>
+                    </div>                  
+                </a>
+
+                <a href="#" class="card_recette">
+                    <div class="card_img">
+                        <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                    </div>
+                    <div class="card_favori" aria-label="favori button">
+                         <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="card_note" aria-label="rating button">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card_text">
+                        <h2>Titre de la recette</h2>
+                        <p>Auteur de la recette</p>
+                    </div>                  
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="info_footer">
+            <div class="mapping">
+                <h4>Pages</h4>
+                <a href="">Home</a>
+                <a href="">Recipe</a>
+                <a href="">Search</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="info_contact_footer">
+                <h4>Contact</h4>
+                <p>Contact us at this adress :</p>
+                <p><span>34 Avenue Jean Jaures, 90000 Belfort</span></p>
+                <p>or via email / phone</p>
+                <a href="mailto:contact@contact.com">contact@contact.com</a>
+                <a href="tel:+3300000000">+33 00 00 00 00</a>
+            </div>
+
+            <div class="info_reseaux">
+                <h4>Réseaux</h4>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"
+                        style="margin: 0 5px 0 0;"></i>Instagram</a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"
+                        style="margin: 0 5px 0 0;"></i>Facebook</a>
+            </div>
+        </div>
+
+        <div class="info_legale">
+            <p><span>©DisHub</span> All rights reserved</p>
+            <a href="">Mentions légales</a>
+        </div>
+
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/c970b44775.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

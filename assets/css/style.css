@@ -970,6 +970,319 @@ footer{
 
 /***** Page Recipe *****/
 
+.the_recipe{
+    margin: 10%;
+}
+
+.img_the_recipe{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.card_the_recipe{
+    position: relative;
+    margin-top: -100px;
+    width: 80vw;
+    border-radius: 25px;;
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px #a6a6a6;
+    z-index: 10;
+}
+
+.menu_the_recipe{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px;
+}
+
+.icon_menu_the_recipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    color: #EF872D;
+    box-shadow: 0px 4px 4px 0px #a6a6a6;
+    cursor: pointer;
+}
+
+.intro_the_recipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro_the_recipe h1{
+    font-size: 65px;
+    font-weight: 700;
+    color: #EF872D;
+}
+
+.intro_the_recipe p{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.intro_the_recipe .rate_the_recipe{
+    font-size: 25px;
+    color: #F4D45A;
+}
+
+.wrapper_infos_the_recipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+}
+
+.item_infos_the_recipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_infos_the_recipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px;
+    border-radius: 25px 0 25px 25px;
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    color: #EF872D;
+    box-shadow: 0px 4px 4px 0px #a6a6a6;
+}
+
+.card_infos_the_recipe img{
+    width: 60px;
+    height: 60px;
+}
+
+.item_infos_the_recipe p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ingredient_the_recipe{
+    padding: 0 5%;
+}
+
+.ingredient_title_the_recipe{
+    display: flex;
+    align-items: center;
+}
+
+.card_title_icon_ingredient{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px 25px 25px;
+    border-radius: 25px 0 25px 25px;
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    color: #EF872D;
+    box-shadow: 0px 4px 4px 0px #a6a6a6;
+}
+
+.ingredient_title_the_recipe h2{
+    font-size: 45px;
+    font-weight: 700;
+    color: #EF872D;
+}
+
+.list_ingredient_the_recipe{
+    margin: 0 50px;
+}
+
+.item_list_ingredient{
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.item_list_ingredient::marker{
+    content: "o    ";
+    color: #EF872D;
+}
+
+.instruction_the_recipe{
+    margin-top: 55px;
+    padding: 0 5%;
+}
+
+.instruction_title_the_recipe{
+    display: flex;
+    align-items: center;
+}
+
+.instruction_title_the_recipe h2{
+    font-size: 45px;
+    font-weight: 700;
+    color: #EF872D;
+}
+
+.text_instruction_the_recipe{
+    margin: 0 0 50px 25px;
+}
+
+.wrapper_rating_the_recipe{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px;
+}
+
+.text_rating_the_recipe{
+    margin-right: 15px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.img_rating_the_recipe{
+    margin-top: 5px;
+    font-size: 20px;
+    color: #F4D45A;
+    cursor: pointer;
+}
+
+.comments_the_recipe{
+    position: relative;
+    padding: 0 10%;
+    background-color: #EF872D;
+    z-index: 1;
+}
+
+.comments_the_recipe::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/filigrane.png");
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: 10;
+}
+
+.title_comments_the_recipe{
+    display: flex;
+    align-items: flex-end;
+    padding-top: 50px;
+}
+
+.title_comments_the_recipe img{
+    margin-bottom: 10px;
+    width: 110px;
+}
+
+.title_comments_the_recipe h3{
+    margin: 0 20px;
+    font-size: 45px;
+    color: white;
+}
+
+.wrapper_comments{
+    padding: 55px 0;
+}
+
+.card_comments{
+    position: relative;
+    padding: 0 2%;
+    border-radius: 25px;
+    width: 55%;
+    background-color: white;
+    z-index: 15;
+}
+
+.card_comments_header{
+    display: flex;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.card_comments_header .avatar img{
+    width: 65px;;
+}
+
+.user_infos_comments p:nth-child(odd){
+    margin: 5px 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user_infos_comments p:nth-child(even){
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+.text_comments{
+    margin: 25px 0;
+}
+
+.option_comments{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 25px 25px 25px;
+}
+
+.item_icon_comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    color: #EF872D;
+    box-shadow: 0px 4px 4px 0px #a6a6a6;
+    cursor: pointer;
+}
+
+.more_recipes{
+    margin: 0 10%;
+}
+
+.title_more_recipes{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 55px;
+}
+
+.title_more_recipes img{
+    margin-bottom: 15px;
+    width: 110px;
+}
+
+.title_more_recipes h3{
+    margin: 0 20px;
+    font-size: 45px;
+    color: #EF872D;
+}
+
+.wrapper_more_recipes{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+/**** ****/
+
+/***** Page Create Recipe *****/
+
 .create_recipe{
     margin: 10%;
 }
