@@ -22,12 +22,23 @@
         <!-- Menu -->
 
         <nav>
-            <div class="nav_link">
-                <img src="../img/logo_dishub.png" alt="logo DisHub">
-                <a href="/index.html">Home</a>
-                <a href="/pages/allrecipes.html">Recipe</a>
-                <a href="">Search</a>
-                <a href="/pages/contact.html">Contact</a>
+          <div class="wrapper_header_nav">
+            <div class="header_nav">
+                <a href="../index.html"><img src="../img/logo_dishub.png" alt="logo DisHub"></a>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+              </div>
+              <div class="nav_link">
+                  <a href="../index.html">Home</a>
+                  <a href="../pages/allrecipes.html">Recipe</a>
+                  <a href="../pages/contact.html">Contact</a>
+                  <div class="nav_add_recipe nav_sign">
+                      <a href="../pages/create_recipe.html">Add your recipe</a>
+                  </div>
+              </div>
             </div>
             <div class="nav_interact">
                 <search>
@@ -36,17 +47,19 @@
                         <button type="submit" aria-label="research your receipe"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </search>
-                <div class="nav_sign">
-                    <a href="/pages/connexion.html">Sign In</a>
-                </div>
-                <div class="nav_sign">
-                    <a href="/pages/connexion.html">Sign Up</a>
-                </div>
-                <div class="nav_user_connected hidden">
-                    <a href="">
-                        <p>username</p>
-                        <img src="" alt="profile picture">
-                    </a>
+                <div class="wrapper_sign">
+                  <div class="nav_sign">
+                      <a href="../pages/connexion.html">Sign In</a>
+                  </div>
+                  <div class="nav_sign">
+                      <a href="../pages/connexion.html">Sign Up</a>
+                  </div>
+                  <div class="nav_user_connected hidden">
+                      <a href="../pages/account.html">
+                          <p>username</p>
+                          <img src="../img/profil/profil.png" alt="profile picture">
+                      </a>
+                  </div>
                 </div>
             </div>
         </nav>
@@ -66,30 +79,32 @@
 
             <!-- filtres-->
 
-            <div class="filtres_homepage">
+            <div class="filtres_homepage">  
 
-                <search>
-                    <form>
-                        <input type="search" id="listing_search" name="listing_search" placeholder="Research ..." aria-label="research your receipe"/>
-                        <button type="submit" aria-label="research your receipe"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </search>
+                <div class="wrapper_filtres_homepage">
+                    <search>
+                        <form>
+                            <input type="search" id="listing_search" name="listing_search" placeholder="Research ..." aria-label="research your receipe"/>
+                            <button type="submit" aria-label="research your receipe"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </search>
 
-                <div class="tag_filter_btn">
-                    <button id="afficherFiltreTag">Choose your filter</button>
-                </div>
-
-                <div class="select_filter_btn">
-                    <div class="btn_text_select">
-                        <p>Sort by: </p>
+                    <div class="tag_filter_btn">
+                        <button id="afficherFiltreTag">Choose your filter</button>
                     </div>
-                    <select name="sort_by" id="sort_by">
-                        <option value="sort_by_none">--Choose an option--</option>
-                        <option value="sort_by_date">🕒 Date</option>
-                        <option value="sort_by_rate">⭐ Rating</option>
-                        <option value="sort_by_asc">⬆️ Ascending</option>
-                        <option value="sort_by_desc">⬇️ Descending</option>
-                    </select>
+
+                    <div class="select_filter_btn">
+                        <div class="btn_text_select">
+                            <p>Sort by: </p>
+                        </div>
+                        <select name="sort_by" id="sort_by">
+                            <option value="sort_by_none">--Choose an option--</option>
+                            <option value="sort_by_date">🕒 Date</option>
+                            <option value="sort_by_rate">⭐ Rating</option>
+                            <option value="sort_by_asc">⬆️ Ascending</option>
+                            <option value="sort_by_desc">⬇️ Descending</option>
+                        </select>
+                    </div>
                 </div>
 
             </div>
@@ -100,17 +115,17 @@
 
                 <!-- implémenter slider -->
                 <div class="tag">
-                    <img src="../img/filtres tag/tag_pizza.png" alt="image tag">
+                    <img src="img/filtres_tag/tag_pizza.png" alt="image tag">
                     <h3>Pizzas</h3>
                 </div>
 
                 <div class="tag">
-                    <img src="../img/filtres tag/tag_pizza.png" alt="image tag">
+                    <img src="img/filtres_tag/tag_pizza.png" alt="image tag">
                     <h3>Pizzas</h3>
                 </div>
 
                 <div class="tag">
-                    <img src="../img/filtres tag/tag_pizza.png" alt="image tag">
+                    <img src="img/filtres_tag/tag_pizza.png" alt="image tag">
                     <h3>Pizzas</h3>
                 </div>
 
@@ -276,12 +291,12 @@
 
             <!-- Pagination -->
 
-            <!-- Bouton créer une recette -->
+            <!-- Bouton all recette -->
 
             <div class="btn_creer_recette">
-                <a href="../pages/create_recipe.html">Add your recipe</a>
+                <a href="/pages/recipe.html">See all the recipes</a>
             </div>
-
+            
         </section>
 
     </main>

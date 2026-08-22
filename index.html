@@ -22,12 +22,23 @@
         <!-- Menu -->
 
         <nav>
-            <div class="nav_link">
-                <img src="img/logo_dishub.png" alt="logo DisHub">
-                <a href="#">Home</a>
-                <a href="/pages/allrecipes.html">Recipe</a>
-                <a href="">Search</a>
-                <a href="/pages/contact.html">Contact</a>
+          <div class="wrapper_header_nav">
+            <div class="header_nav">
+                <a href="../index.html"><img src="../img/logo_dishub.png" alt="logo DisHub"></a>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+              </div>
+              <div class="nav_link">
+                  <a href="../index.html">Home</a>
+                  <a href="/pages/allrecipes.html">Recipe</a>
+                  <a href="/pages/contact.html">Contact</a>
+                  <div class="nav_add_recipe nav_sign">
+                      <a href="pages/create_recipe.html">Add your recipe</a>
+                  </div>
+              </div>
             </div>
             <div class="nav_interact">
                 <search>
@@ -36,17 +47,19 @@
                         <button type="submit" aria-label="research your receipe"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </search>
-                <div class="nav_sign">
-                    <a href="/pages/connexion.html">Sign In</a>
-                </div>
-                <div class="nav_sign">
-                    <a href="/pages/connexion.html">Sign Up</a>
-                </div>
-                <div class="nav_user_connected hidden">
-                    <a href="">
-                        <p>username</p>
-                        <img src="" alt="profile picture">
-                    </a>
+                <div class="wrapper_sign">
+                  <div class="nav_sign">
+                      <a href="/pages/connexion.html">Sign In</a>
+                  </div>
+                  <div class="nav_sign">
+                      <a href="/pages/connexion.html">Sign Up</a>
+                  </div>
+                  <div class="nav_user_connected hidden">
+                      <a href="/pages/account.html">
+                          <p>username</p>
+                          <img src="img/profil/profil.png" alt="profile picture">
+                      </a>
+                  </div>
                 </div>
             </div>
         </nav>
@@ -61,21 +74,23 @@
 
             <div class="img_accueil">
                 <div class="img_wrapper">
-                    <img src="img/img_plat_accueil.png" alt="image plat dishbub">
-                    <div class="img_accueil_text">
-                        <h1>Are you hungry ?<br>Let's start Cooking</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac aliquet nibh. Nunc nunc nunc, sagittis ac mattis at, tincidunt id metus.
-                        </p>
-                        <div class="btn_sign">
-                            <a href="">Sign Up</a>
-                        </div>
+                    <h1>Are you hungry ?<br>Let's start Cooking</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac aliquet nibh. Nunc nunc nunc, sagittis ac mattis at, tincidunt id metus.
+                    </p>
+                    <div class="btn_sign">
+                        <a href="">Sign Up</a>
                     </div>
+                    <!-- <img src="img/img_plat_accueil.png" alt="image plat dishbub"></div> -->
+                    <!-- <div class="img_accueil_text">< -->
                 </div>
             </div>
 
             <div class="element_scroll">
-                <a href="#listing_recettes">Scroll <br/> <i class="fa-solid fa-arrow-down"></i></a>
+                <a href="#listing_recettes">Scroll <br/> <!--<i class="fa-solid fa-arrow-down"></i>--></a>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
         </section>
@@ -93,30 +108,32 @@
 
             <!-- filtres-->
 
-            <div class="filtres_homepage">
+            <div class="filtres_homepage">  
 
-                <search>
-                    <form>
-                        <input type="search" id="listing_search" name="listing_search" placeholder="Research ..." aria-label="research your receipe"/>
-                        <button type="submit" aria-label="research your receipe"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </search>
+                <div class="wrapper_filtres_homepage">
+                    <search>
+                        <form>
+                            <input type="search" id="listing_search" name="listing_search" placeholder="Research ..." aria-label="research your receipe"/>
+                            <button type="submit" aria-label="research your receipe"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </search>
 
-                <div class="tag_filter_btn">
-                    <button id="afficherFiltreTag">Choose your filter</button>
-                </div>
-
-                <div class="select_filter_btn">
-                    <div class="btn_text_select">
-                        <p>Sort by: </p>
+                    <div class="tag_filter_btn">
+                        <button id="afficherFiltreTag">Choose your filter</button>
                     </div>
-                    <select name="sort_by" id="sort_by">
-                        <option value="sort_by_none">--Choose an option--</option>
-                        <option value="sort_by_date">🕒 Date</option>
-                        <option value="sort_by_rate">⭐ Rating</option>
-                        <option value="sort_by_asc">⬆️ Ascending</option>
-                        <option value="sort_by_desc">⬇️ Descending</option>
-                    </select>
+
+                    <div class="select_filter_btn">
+                        <div class="btn_text_select">
+                            <p>Sort by: </p>
+                        </div>
+                        <select name="sort_by" id="sort_by">
+                            <option value="sort_by_none">--Choose an option--</option>
+                            <option value="sort_by_date">🕒 Date</option>
+                            <option value="sort_by_rate">⭐ Rating</option>
+                            <option value="sort_by_asc">⬆️ Ascending</option>
+                            <option value="sort_by_desc">⬇️ Descending</option>
+                        </select>
+                    </div>
                 </div>
 
             </div>
@@ -303,10 +320,10 @@
 
             <!-- Pagination -->
 
-            <!-- Bouton créer une recette -->
+            <!-- Bouton all recette -->
 
             <div class="btn_creer_recette">
-                <a href="/pages/create_recipe.html">Add your recipe</a>
+                <a href="/pages/recipe.html">See all the recipes</a>
             </div>
 
         </section>

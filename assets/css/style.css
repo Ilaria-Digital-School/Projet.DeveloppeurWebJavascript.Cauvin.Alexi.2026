@@ -17,16 +17,16 @@
 
 /**** Class outils ****/
 
-.hidden{
-    display: none!important;
+html{
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: "Afacad";
 }
 
-body a{
-    scroll-behavior: smooth;
+.hidden{
+    display: none!important;
 }
 
 input{
@@ -46,6 +46,10 @@ input:focus{
 /**** ****/
 
 /**** Header - Navigation  ****/
+
+/**** Menu Burger ****/
+
+/**** ****/
 
 /** Bloc decoration home page **/
 
@@ -70,20 +74,29 @@ input:focus{
 
 /** Bloc Navigation **/
 
+.burger {
+    display: none;
+}
+
 nav{
     position: fixed;
     top: 0;
-    left: 10%;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5vh 0;
+    margin: 5vh 10%;
     padding: 15px 30px;
     width: 77%;
     background-color: white;
     border-radius: 25px;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
     z-index: 100000000;
+}
+
+.wrapper_header_nav{
+  display: flex;
+  align-items: center;
 }
 
 .nav_link{
@@ -148,9 +161,14 @@ search form button{
     cursor: pointer;
 }
 
+.wrapper_sign{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .nav_sign{
-    margin: 0 15px;
-    padding: 5px 25px;
+    padding: 5px 10px;
     border: 3px solid #EF872D;
     border-radius: 25px;
     text-align: center;
@@ -201,43 +219,47 @@ search form button{
 /**** Section Accueil ****/
 
 .accueil{
-    background-image: url("../img/bg_accueil.png");
+    margin: 10%;
+}
+
+.accueil::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../img/bg_accueil.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 130vh;
+    z-index: -1;
 }
 
 .img_accueil{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    aspect-ratio: 16 / 9;
+    background-image: url("../../img/img_plat_accueil.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
 }
 
 .img_wrapper{
-    position: relative;
-    margin-top: 20vh;
-    width: 80%;
-}
-
-.img_wrapper img{
+    box-sizing: border-box;
     width: 100%;
+    padding: 5%;
 }
 
-.img_accueil_text{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 25px 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-
-.img_accueil_text h1{
+.img_wrapper h1{
     font-weight: 700;
     font-size: 105px;
     color: white;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.84)
 }
 
-.img_accueil_text p{
+.img_wrapper p{
     font-weight: 500;
     font-size: 25px;
     width: 40%;
@@ -261,37 +283,47 @@ search form button{
 }
 
 .element_scroll{
-    position: relative;
-    top: 35px;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    margin-top: -60px;
+    margin-top: -30px;
     cursor: pointer;
 }
 
-.element_scroll a{
-    padding: 10px;
-    border: 3px solid #EF872D;
+.element_scroll div{
+    border: 2px solid #EF872D;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: white;
+    width: 8px;
+    height: 8px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.element_scroll a{
     text-decoration: none;
     text-align: center;
     font-weight: 500;
     font-size: 30px;
     color: #EF872D;
-    z-index: 15;
+    transition: transform 0.4s ease-in-out;
+}
+
+.element_scroll a:hover{
+    transform: translateY(20px);
+}
+
+.element_scroll a:hover ~ div{
+    transform: translateY(20px);
 }
 
 /**** ****/
 
 /**** Section listing recettes *****/
 
-/* #listing_recettes{
-    height: 2500px;
-} */
+#listing_recettes{
+   scroll-margin-top: 145px;
+} 
 
 /** Bloc titre **/
 
@@ -319,11 +351,15 @@ search form button{
 
 .filtres_homepage{
     display: flex;
+    justify-content: center;
+}
+
+.wrapper_filtres_homepage{
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 5vh auto;
     padding: 15px 30px;
-    width: max-content;
     background-color: white;
     border-radius: 25px;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
@@ -579,7 +615,7 @@ search form button{
     padding: 25px 35px;
     border-radius: 25px 0 25px 25px;
     width: 60%;
-    background-color: #EF872D;
+    background-color: #EF872D;  
     text-align: center;
 }
 
@@ -979,6 +1015,10 @@ footer{
     justify-content: center;
     position: relative;
     z-index: 2;
+}
+
+.img_the_recipe img{
+    width: 95%;
 }
 
 .card_the_recipe{
@@ -1416,8 +1456,13 @@ footer{
     box-shadow: 0px 4px 4px 0px #ababab;
 }
 
+.input_ingredient_action{
+    display: flex;
+    gap: 15px;
+}
+
 .input_ingredient button{
-    margin-top: 15px;;
+    margin-top: 15px;
     padding: 8px 25px;
     border: none;
     border-radius: 15px;
@@ -1449,7 +1494,8 @@ footer{
     font-family: "Afacad";
     font-weight: 500;
     font-size: 15px;
-    width: 800px;
+    max-width: 800px;
+    min-width: 350px;
     min-height: 125px;
     box-shadow: 0px 4px 4px 0px #ababab;
 }
@@ -1500,7 +1546,7 @@ footer{
 }
 
 .contact_text_wrapper h1{
-    font-size: 105px;
+    font-size: 90px;
     color:#EF872D;
 }
 
@@ -1864,3 +1910,936 @@ footer{
 }
 
 /**** ****/
+
+/******************************/
+
+/******** RESPONSIVE **********/
+
+@media (max-width: 1199.98px) {
+
+    /***** HEADER *****/
+
+    .deco_img_header img:nth-child(1){
+        width: 225px;
+    }
+
+    /**** ****/
+
+    /***** NAVIGATION ******/
+
+      nav {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 3vh 5%;
+      padding: 15px 25px;
+      width: 90%;
+      background-color: white;
+      border-radius: 25px;
+      box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+      z-index: 100000000;
+    }
+
+    .wrapper_header_nav{
+      display: block;
+    }
+
+    .header_nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 24px;
+        cursor: pointer;
+        z-index: 100000001;
+    }
+
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #EF872D;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    .nav_link, .nav_interact {
+        display: none;
+    }
+
+    nav.active .nav_link, nav.active .nav_interact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav_link {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .nav_link a {
+        margin: 0;
+    }
+
+    .nav_link img {
+        margin: 0;
+        width: 40px;
+    }
+
+    .nav_interact {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .nav_interact search {
+        margin: 0;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    search form {
+        width: 100%;
+    }
+
+    search form input {
+        width: 100%;
+    }
+
+    .nav_sign {
+        margin: 0;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /**** ****/
+
+    /***** PAGE INDEX ******/
+
+
+    /**** ****/
+
+    /***** PAGE CONNEXION / INSCRIPTION ******/
+
+
+    /**** ****/
+
+    /***** PAGE ALL RECIPES ******/
+
+    /**** ****/
+
+    /***** PAGE RECIPE ******/
+
+    .the_recipe{
+        margin-top: 20%;
+    }
+
+    .img_the_recipe img{
+        width: 100%;
+    }
+
+    .card_the_recipe{
+        margin-top: 50px;
+    }
+
+    .wrapper_infos_the_recipe{
+        flex-wrap: wrap;
+    }
+
+    /**** ****/
+
+    /***** PAGE CREATE RECIPE ******/
+
+    /**** ****/
+
+    /***** PAGE CONTACT ******/
+
+    .contact_wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact_text_wrapper{
+        margin: 5% 0;
+        text-align: center;
+    }
+
+    .contact_form_wrapper{
+        margin: 0;
+    }
+    
+
+    /**** ****/
+
+    /***** PAGE ACCOUNT ******/
+
+    .recap_infos{
+        width: 50vw;
+    }
+
+    /**** ****/
+
+
+}
+
+@media (max-width: 991.98px) {
+
+    /***** NAVIGATION ******/
+
+    /**** ****/
+
+    /***** PAGE INDEX ******/
+
+    .accueil{
+        margin: 20% 5vw;
+    }
+
+    .img_accueil{
+        width: 90vw;
+        height: 75vh;
+    }
+
+    .img_accueil h1{
+        font-size: 55px;
+        margin: 10px 0;
+    }
+
+    .img_accueil p{
+        margin: 25px 0;
+        font-size: 20px;
+    }
+
+    .wrapper_filtres_homepage{
+        margin: 0 10%;
+        justify-content: center;
+    }
+
+    .select_filter_btn{
+        margin-top: 25px;
+    }
+
+    /**** ****/
+
+    /***** PAGE CONNEXION / INSCRIPTION ******/
+
+    .wrapper_connexion {
+        width: 100%;
+        min-height: 100vh;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .wrapper_connexion .form_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35%;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .form_wrapper form {
+        justify-content: flex-start;
+        padding: 35px 30px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sign_in {
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .sign_up {
+        top: -65%;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .wrapper_connexion.right_panel_active .sign_in {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    .wrapper_connexion.right_panel_active .sign_up {
+        transform: translateY(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: none;
+    }
+
+    .overlay_wrapper {
+        position: absolute;
+        top: 65%;
+        left: 0;
+        width: 100%;
+        height: 35%;
+        overflow: hidden;
+        transition: transform 0.6s ease-in-out;
+        z-index: 100;
+    }
+
+    .wrapper_connexion.right_panel_active .overlay_wrapper {
+        transform: translateY(-185.714%);
+    }
+
+    .overlay {
+        position: relative;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        transform: translateY(0);
+        transition: transform 0.6s ease-in-out;
+    }
+
+    .wrapper_connexion.right_panel_active .overlay {
+        transform: translateY(50%);
+    }
+
+    .overlay_panel {
+        position: absolute;
+        left: 0;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 50%;
+    }
+
+    .overlay_left {
+        top: 0;
+        transform: translateY(-20%);
+    }
+
+    .wrapper_connexion.right_panel_active .overlay_left {
+        transform: translateY(0);
+    }
+
+    .overlay_right {
+        top: 50%;
+        right: auto;
+        transform: translateY(0);
+    }
+
+    .wrapper_connexion.right_panel_active .overlay_right {
+        transform: translateY(20%);
+    }
+
+    .form_wrapper h1 {
+        margin: 10px 0 15px;
+        font-size: 50px;
+    }
+
+    .overlay_panel h1 {
+        margin: 0 0 10px;
+        font-size: 42px;
+    }
+
+    .overlay_panel p {
+        margin: 0;
+        max-width: 500px;
+        font-size: 17px;
+    }
+
+    .sign_reseau {
+        margin-bottom: 10px;
+    }
+
+    .form_wrapper input {
+        margin: 7px 0;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 400px;
+        min-width: 0;
+    }
+
+    .form_wrapper p {
+        margin: 5px 0 10px;
+    }
+
+    .btn_sign {
+        margin-top: 15px;
+    }
+
+    .overlay_btn {
+        margin-top: 15px;
+    }
+
+    /**** ****/
+
+    /***** PAGE ALL RECIPES ******/
+
+    /**** ****/
+
+    /***** PAGE RECIPE ******/
+
+    /**** ****/
+
+    /***** PAGE CREATE RECIPE ******/
+
+    /**** ****/
+
+    /***** PAGE CONTACT ******/
+
+    .contact_text_wrapper{
+        margin: 10% 0 5% 0;
+    }
+
+    .contact_text_wrapper h1{
+        font-size: 75px;
+    }
+
+    /**** ****/
+
+    /***** PAGE ACCOUNT ******/
+
+    .account_infos{
+        margin: 25% 0 0 0;
+    }
+
+    .wrapper_infos_account{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recap_infos{
+        margin-right: 0;
+    }
+
+    .form_change_infos{
+        margin: 10% 0 0 0;
+    }
+
+    .form_change_infos form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .input_account_changes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
+    .form_change_infos form input{
+        min-width: 100%;
+    }
+
+    /**** ****/
+
+}
+
+@media (max-width: 767.98px) {
+
+    /***** HEADER ******/
+
+    .deco_img_header img:nth-child(1){
+        width: 185px;
+    }
+
+    /**** ****/
+
+    /***** NAVIGATION ******/
+
+    /**** ****/
+
+    /***** PAGE INDEX ******/
+
+    .accueil{
+        margin: 40% 5vw;
+    }
+
+    .tag_filter_btn{
+        margin-top: 25px;
+    }
+
+    .select_filter_btn{
+        margin-top: 25px;
+    }
+
+    .recettes_titre img{
+        margin-bottom: 20px;
+        width: 100px;
+    }
+
+    .recettes_titre h2{
+        font-size: 65px;
+    }
+
+    .short_text{
+        margin: 5% 0;
+    }
+
+    .short_text h2{
+        font-size: 65px;
+    }
+
+    .short_text img{
+        margin-bottom: 20px;
+        width: 100px;
+    }
+    
+    .news_wrapper p{
+        margin: 25px 0;
+        padding: 0 10px;
+    }
+
+    /**** ****/
+
+    /***** PAGE CONNEXION / INSCRIPTION ******/
+
+    .wrapper_connexion .form_wrapper {
+        height: 40%;
+    }
+
+    .form_wrapper.sign_in {
+        margin-top: 100px;
+    }
+
+    .sign_up {
+        top: -68%;
+    }
+
+    .overlay_wrapper {
+        top: 68%;
+        height: 32%;
+    }
+
+    .wrapper_connexion.right_panel_active .overlay_wrapper {
+        transform: translateY(-212.5%);
+    }
+
+    .form_wrapper form {
+        padding: 20px 25px;
+        justify-content: flex-start;
+    }
+
+    .form_wrapper h1 {
+        font-size: 40px;
+        margin: 5px 0 10px;
+    }
+
+    .form_wrapper p {
+        font-size: 14px;
+        margin: 5px 0 8px;
+    }
+
+    .form_wrapper input {
+        padding: 12px 15px;
+        margin: 6px 0;
+        max-width: 350px;  
+    }
+
+    .sign_reseau {
+        margin-bottom: 5px;
+    }
+
+    .link_reseau {
+        width: 36px;
+        height: 36px;
+    }
+
+    .overlay_panel {
+        padding: 15px 25px;
+    }
+
+    .overlay_panel h1 {
+        margin-bottom: 5px;
+        font-size: 34px;
+    }
+
+    .overlay_panel p {
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+    .overlay_btn {
+        margin-top: 12px;
+    }
+
+    /**** ****/
+
+    /***** PAGE ALL RECIPES ******/
+
+    /**** ****/
+
+    /***** PAGE RECIPE ******/
+
+    /**** ****/
+
+    /***** PAGE CREATE RECIPE ******/
+
+    .create_recipe{
+        margin-top: 25%;
+    }
+
+    .create_recipe h1{
+        font-size: 75px;
+    }
+
+    .create_recipe h1 span{
+        font-size: 35px;
+    }
+
+    .infos_input input{
+        min-width: 250px;
+    }
+
+    .add_tag_recipe_wrapper{
+        flex-wrap: wrap;
+    }
+
+    /**** ****/
+
+    /***** PAGE CONTACT ******/
+
+    /**** ****/
+
+    /***** PAGE ACCOUNT ******/
+
+    /**** ****/
+
+}
+
+@media (max-width: 575.98px) {
+
+    /***** NAVIGATION ******/
+
+    .deco_img_header img:nth-child(1){
+        width: 165px;
+    }
+
+    nav{
+        width: 90%;
+    }
+
+    /**** ****/
+
+    /***** PAGE INDEX ******/
+
+    .accueil{
+        margin: 50% 0;
+    }
+
+    .accueil::before{
+        height: 110vh;
+    }
+
+    .img_accueil{
+        width: 100vw;
+        height: 75vh;
+        border-radius: 0;
+    }
+
+    .img_accueil h1{
+        margin: 10px 0;
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .img_accueil p{
+        margin: 25px 0;
+        font-size: 20px;
+        width: 100%;
+        color: #EF872D;
+        text-align: center;
+    }
+
+    .img_wrapper .btn_sign{
+        margin: 25px auto;
+    }
+
+    .recettes_titre{
+        margin: 5% 0;
+    }
+
+    .recettes_titre img{
+        margin-bottom: 15px;
+        width: 60px;
+    }
+
+    .recettes_titre h2{
+        font-size: 45px;
+    }
+
+    .wrapper_filtres_homepage{
+        margin: 0 10%;
+        justify-content: center;
+    }
+
+    .tag_filter_btn button{
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .select_filter_btn{
+        margin-top: 25px;
+    }
+
+    .select_filter_btn select{
+        padding: 20px;
+    }
+
+    .short_text{
+        margin: 5% 0;
+    }
+
+    .short_text h2{
+        font-size: 45px;
+    }
+
+    .short_text img{
+        margin-bottom: 15px;
+        width: 60px;
+    }
+
+    .newsletter{
+        background-color: #EF872D;
+        width: 100%;
+    }
+
+    .news_wrapper{
+        padding: 25px 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .news_wrapper p{
+        margin: 25px 0;
+        padding: 0 10px;
+    }
+
+    .info_footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mapping{
+        align-items: center;
+    }
+
+    .info_contact_footer{
+        margin: 35px 0;
+    }
+
+    /**** ****/
+
+    /***** PAGE CONNEXION / INSCRIPTION ******/
+
+    .wrapper_connexion .form_wrapper {
+        height: 40%;
+    }
+
+    .form_wrapper.sign_in {
+        margin-top: 100px;
+    }
+
+    .sign_up {
+        top: -70%;
+    }
+
+    .overlay_wrapper {
+        top: 70%;
+        height: 30%;
+    }
+
+    .wrapper_connexion.right_panel_active .overlay_wrapper {
+        transform: translateY(-233.333%);
+    }
+
+    .form_wrapper form {
+        padding: 15px 20px;
+        justify-content: flex-start;
+    }
+
+    .form_wrapper h1 {
+        margin: 5px 0 8px;
+        font-size: 34px;
+    }
+
+    .form_wrapper p {
+        margin: 4px 0 6px;
+        font-size: 13px;
+    }
+
+    .sign_reseau {
+        margin-bottom: 4px;
+    }
+
+    .link_reseau {
+        width: 34px;
+        height: 34px;
+    }
+
+    .form_wrapper input {
+        margin: 5px 0;
+        padding: 10px 14px;
+        width: 100%;
+        max-width: 310px;
+        font-size: 14px;
+    }
+
+    .btn_sign {
+        margin-top: 10px;
+        padding: 5px 20px;
+    }
+
+    .overlay_panel {
+        padding: 10px 20px;
+    }
+
+    .overlay_panel h1 {
+        margin: 0 0 5px;
+        font-size: 28px;
+    }
+
+    .overlay_panel p {
+        font-size: 13px;
+        line-height: 1.2;
+        max-width: 320px;
+    }
+
+    .overlay_btn {
+        margin-top: 10px;
+    }
+
+    /**** ****/
+
+    /***** PAGE ALL RECIPES ******/
+
+    /**** ****/
+
+    /***** PAGE RECIPE ******/
+
+    .the_recipe{
+        margin: 45% 0;  
+    }
+
+    .card_the_recipe{
+        margin: 50px auto;
+        width: 90vw;
+    }
+
+    .intro_the_recipe h1{
+        font-size: 45px;
+    }
+
+    .ingredient_title_the_recipe h2{
+        font-size: 25px;
+    }
+
+    .instruction_title_the_recipe h2{
+        font-size: 25px;
+    }
+
+    .card_comments{
+        width: auto;
+    }
+
+    /**** ****/
+
+    /***** PAGE CREATE RECIPE ******/
+
+    .create_recipe{
+        margin: 40% 5% 0 5%; 
+    }
+
+    .wrapper_infos{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .infos_input{
+        margin: 15px 0 0 0;
+    }
+
+    .input_image{
+        width: 300px;
+    }
+
+    input[type="file"]::file-selector-button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 15px 0;
+    }
+
+    .input_ingredient input{
+        min-width: 250px;
+    }
+
+    .recipe_instruction textarea{
+        min-width: 250px;
+    }
+
+    /**** ****/
+
+    /***** PAGE CONTACT ******/
+
+    .contact_text_wrapper{
+        margin: 30% 0 0 0;
+        width: 80%;
+    }
+
+    .contact_form_wrapper{
+        width: 80%;
+    }
+
+    /**** ****/
+
+    /***** PAGE ACCOUNT ******/
+
+    .account_infos{
+        margin-top: 35%;
+    }
+
+    .recap_infos{
+        width: 80vw;
+    }
+
+    /**** ****/
+
+}
+
+
+/******************************/

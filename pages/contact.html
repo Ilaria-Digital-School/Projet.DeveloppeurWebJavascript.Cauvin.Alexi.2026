@@ -21,12 +21,23 @@
         <!-- Menu -->
 
         <nav>
-            <div class="nav_link">
-                <img src="../img/logo_dishub.png" alt="logo DisHub">
-                <a href="/index.html">Home</a>
-                <a href="/pages/allrecipes.html">Recipe</a>
-                <a href="">Search</a>
-                <a href="#">Contact</a>
+          <div class="wrapper_header_nav">
+            <div class="header_nav">
+                <a href="../index.html"><img src="../img/logo_dishub.png" alt="logo DisHub"></a>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+              </div>
+              <div class="nav_link">
+                  <a href="../index.html">Home</a>
+                  <a href="../pages/allrecipes.html">Recipe</a>
+                  <a href="../pages/contact.html">Contact</a>
+                  <div class="nav_add_recipe nav_sign">
+                      <a href="../pages/create_recipe.html">Add your recipe</a>
+                  </div>
+              </div>
             </div>
             <div class="nav_interact">
                 <search>
@@ -35,17 +46,19 @@
                         <button type="submit" aria-label="research your receipe"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </search>
-                <div class="nav_sign">
-                    <a href="">Sign In</a>
-                </div>
-                <div class="nav_sign">
-                    <a href="">Sign Up</a>
-                </div>
-                <div class="nav_user_connected hidden">
-                    <a href="">
-                        <p>username</p>
-                        <img src="" alt="profile picture">
-                    </a>
+                <div class="wrapper_sign">
+                  <div class="nav_sign">
+                      <a href="../pages/connexion.html">Sign In</a>
+                  </div>
+                  <div class="nav_sign">
+                      <a href="../pages/connexion.html">Sign Up</a>
+                  </div>
+                  <div class="nav_user_connected hidden">
+                      <a href="../pages/account.html">
+                          <p>username</p>
+                          <img src="../img/profil/profil.png" alt="profile picture">
+                      </a>
+                  </div>
                 </div>
             </div>
         </nav>

@@ -1,3 +1,27 @@
+function menuBurger() {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+    const navLinks = document.querySelectorAll("nav a");
+
+    if (!burger || !nav) {
+        return;
+    }
+
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        nav.classList.toggle("active");
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            burger.classList.remove("active");
+            nav.classList.remove("active");
+        });
+    });
+}
+
+menuBurger();
+
 function afficherTagFilter() {
 
     let bouton = document.querySelector("#afficherFiltreTag");
@@ -21,7 +45,7 @@ function connexion() {
     const showSignUp = document.getElementById('showSignUp');
     const wrapper = document.getElementById('wrapper_connexion');
 
-    if(!showSignIn || !showSignUp || !wrapper){
+    if (!showSignIn || !showSignUp || !wrapper) {
         return;
     }
 
@@ -37,19 +61,19 @@ function connexion() {
 connexion();
 
 
-function addIngredient(){
+function addIngredient() {
     const buttonAdd = document.getElementById('add_ingredient');
     const buttonRemove = document.getElementById('remove_ingredient');
     const parentDiv = document.querySelector('.input_ingredient');
     const actionDiv = document.querySelector('.input_ingredient_action');
 
     let i = 1;
-    
 
-    if(!buttonAdd || !parentDiv){
+
+    if (!buttonAdd || !buttonRemove || !parentDiv || !actionDiv) {
         return;
     }
-    
+
     buttonAdd.addEventListener('click', () => {
         i++;
 
