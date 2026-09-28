@@ -1,1 +1,124 @@
-<p>create-recipe works!</p>
+<main>
+
+    <section id="create_recipe" class="create_recipe">
+
+        <h1>Shared <span>your</span> Recipe</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac aliquet nibh. Nunc nunc nunc, sagittis
+            ac mattis at, tincidunt id metus.</p>
+
+        <form>
+
+            <div class="practical_infos">
+                <h2 class="title_section_form">Pratical Informations </h2>
+
+                <div class="wrapper_infos _time">
+                    <div class="infos_icon">
+                        <img src="../img/icon_create_recipe/icon_time.png" alt="Time for preparation">
+                    </div>
+                    <div class="infos_input">
+                        <label for="input_time">Time of prepartion</label>
+                        <input type="text" name="input_time" id="input_time" placeholder="Time ...">
+                    </div>
+                </div>
+
+                <div class="wrapper_infos _people">
+                    <div class="infos_icon">
+                        <img src="../img/icon_create_recipe/icon_people.png" alt="Number of people">
+                    </div>
+                    <div class="infos_input">
+                        <label for="input_people">Number of people</label>
+                        <input type="number" name="input_people" id="input_people" placeholder="Number of people ...">
+                    </div>
+                </div>
+
+                <div class="wrapper_infos _kcal">
+                    <div class="infos_icon">
+                        <img src="../img/icon_create_recipe/icon_kcal.png" alt="Kcal of the recipe">
+                    </div>
+                    <div class="infos_input">
+                        <label for="input_kcal">Number of kcal</label>
+                        <input type="number" name="input_kcal" id="input_kcal" placeholder="Number of Kcal ...">
+                    </div>
+                </div>
+
+                <div class="wrapper_infos _difficulties">
+                    <div class="infos_icon">
+                        <img src="../img/icon_create_recipe/iocn_difficulties.png" alt="Difficulties of the recipe">
+                    </div>
+                    <div class="infos_input">
+                        <label for="input_difficulties">Number of kcal</label>
+                        <select name="input_difficulties" id="input_difficulties">
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe_image">
+                <h2 class="title_section_form">Import your photo</h2>
+
+                <div class="input_image">
+                    <label for="img_recipe">Upload your photo</label>
+                    <input type="file" name="img_recipe" id="img_recipe" accept="image/png, image/jpeg">
+                </div>
+            </div>
+
+            <div class="recipe_ingredient">
+                <h2 class="title_section_form">Ingredients</h2>
+
+                <div class="input_ingredient">
+                    <input type="text" name="ingredient" id="ingredient" placeholder="ingredient 1"
+                        aria-label="ingredient 1">
+                    <div class="input_ingredient_action">
+                        <button type="button" id="add_ingredient" class="add_ingredient"
+                            aria-label="add ingredient">Add</button>
+                        <button type="button" id="remove_ingredient" class="remove_ingredient"
+                            aria-label="remove ingredient">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe_instruction">
+                <h2 class="title_section_form">Instructions</h2>
+                <textarea name="instruction" id="instruction" placeholder="Instructions ..."
+                    aria-label="instructions for the recipe"></textarea>
+            </div>
+
+            <div class="add_tag_recipe">
+                <h2 class="title_section_form">Click to add the tag</h2>
+
+                <div class="add_tag_recipe_wrapper">
+                    <div class="tag">
+                        <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                        <h3>Pizzas</h3>
+                    </div>
+                    <div class="tag">
+                        <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                        <h3>Pizzas</h3>
+                    </div>
+                    <div class="tag">
+                        <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                        <h3>Pizzas</h3>
+                    </div>
+                    <div class="tag">
+                        <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                        <h3>Pizzas</h3>
+                    </div>
+                    <div class="tag">
+                        <img src="../img/filtres_tag/tag_pizza.png" alt="image tag">
+                        <h3>Pizzas</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publish_recipe">
+                <button type="submit">Publish your recipe</button>
+            </div>
+        </form>
+
+    </section>
+
+</main>

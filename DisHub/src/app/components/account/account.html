@@ -1,1 +1,204 @@
-<p>account works!</p>
+<main>
+
+    <section id="account_infos" class="account_infos">
+
+        <h1>Your Account informations</h1>
+
+        <div class="wrapper_infos_account">
+
+            <div class="recap_infos">
+
+                <div class="infos_photo_account">
+                    <img src="../img/profil/profil.png" alt="user photo account">
+                </div>
+
+                <div class="text_infos_account">
+
+                    <div class="email_infos text_infos">
+                        <h2>Email :</h2>
+                        <p>email@contact.com</p>
+                    </div>
+
+                    <div class="identifiant_infos text_infos">
+                        <h2>Identifier :</h2>
+                        <p>username identifier</p>
+                    </div>
+
+                    <div class="recipe_infos text_infos">
+                        <h2>Recipe shared :</h2>
+                        <p>10 recipe shared</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form_change_infos">
+
+                <form>
+
+                    <h2>Change your Informations</h2>
+
+                    <div class="change_photo_account">
+                        <div class="photo_account infos_photo_account">
+                            <img src="../img/profil/profil.png" alt="recap photo account">
+                        </div>
+
+                        <div class="btn_change_photo_account">
+                            <button type="button" id="photo_profil_change" class="photo_profil_change"
+                                aria-label="Change your profil photo">Change your photo</button>
+                            <button type="button" id="remove_profil_photo" class="remove_profil_photo"
+                                aria-label="remove your profil photo">Remove your photo</button>
+                        </div>
+                    </div>
+
+                    <div class="input_account_changes">
+                        <input type="text" id="change_name" name="change_name" placeholder="Name"
+                            aria-label="input pour changer le nom" />
+                        <input type="email" id="change_email" name="change_email" placeholder="Email"
+                            aria-label="input pour changer l'email" />
+                        <input type="password" id="change_pwd" name="change_pwd" placeholder="Password"
+                            aria-label="input pour changer le mot de passe" />
+                        <input type="password" id="change_confirm_pwd" name="change_confirm_pwd"
+                            placeholder="Confirm your password"
+                            aria-label="input pour confirmer le mot de passe changer" />
+                        <div class="btn_save_changes">
+                            <button aria-label="bouton inscription">Saves changes</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="recipe_shared" class="recipe_shared">
+
+        <h2>Recipes Shared</h2>
+
+        <div class="wrapper_recipe_shared">
+            <div class="user_recipe_shared">
+                <a href="../pages/create_recipe.html" class="btn_add_recipe_account card_recette">
+                    <div class="icon_btn_add_recipe">
+                        <span><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <p>Shared your recipe</p>
+                </a>
+                <div class="user_recipe_shared_wrapper">
+                    <a href="#" class="card_recette">
+                        <div class="card_img">
+                            <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                        </div>
+
+                        <div class="card_text">
+                            <h2>Titre de la recette</h2>
+                            <p>Auteur de la recette</p>
+                        </div>
+                    </a>
+                    <div class="btn_recipe_modify">
+                        <button type="button">modify your recipe</button>
+                    </div>
+                </div>
+                <div class="user_recipe_shared_wrapper">
+                    <a href="#" class="card_recette">
+                        <div class="card_img">
+                            <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                        </div>
+
+                        <div class="card_text">
+                            <h2>Titre de la recette</h2>
+                            <p>Auteur de la recette</p>
+                        </div>
+                    </a>
+                    <div class="btn_recipe_modify">
+                        <button type="button">modify your recipe</button>
+                    </div>
+                </div>
+                <div class="user_recipe_shared_wrapper">
+                    <a href="#" class="card_recette">
+                        <div class="card_img">
+                            <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                        </div>
+
+                        <div class="card_text">
+                            <h2>Titre de la recette</h2>
+                            <p>Auteur de la recette</p>
+                        </div>
+                    </a>
+                    <div class="btn_recipe_modify">
+                        <button type="button">modify your recipe</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="favorite_recipe" class="favorite_recipe">
+
+        <h2>Your favorite recipe</h2>
+
+        <div class="user_recipe_favorite">
+            <a href="#" class="card_recette">
+                <div class="card_img">
+                    <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                </div>
+                <div class="card_favori" aria-label="favori button">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="card_note" aria-label="rating button">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="card_text">
+                    <h2>Titre de la recette</h2>
+                    <p>Auteur de la recette</p>
+                </div>
+            </a>
+            <a href="#" class="card_recette">
+                <div class="card_img">
+                    <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                </div>
+                <div class="card_favori" aria-label="favori button">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="card_note" aria-label="rating button">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="card_text">
+                    <h2>Titre de la recette</h2>
+                    <p>Auteur de la recette</p>
+                </div>
+            </a>
+            <a href="#" class="card_recette">
+                <div class="card_img">
+                    <img src="../img/recettes/img_recette.png" alt="photo de la recette">
+                </div>
+                <div class="card_favori" aria-label="favori button">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="card_note" aria-label="rating button">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="card_text">
+                    <h2>Titre de la recette</h2>
+                    <p>Auteur de la recette</p>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+</main>
