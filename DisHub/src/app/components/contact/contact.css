@@ -1,0 +1,11 @@
+.btn-disabled{
+    border-color: #ccc;
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.text-danger{
+    margin-left: 25px;
+    color: red;
+}

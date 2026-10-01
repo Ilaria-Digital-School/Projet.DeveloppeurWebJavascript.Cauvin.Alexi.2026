@@ -1,5 +1,9 @@
+@if (!hideLayout){
 <app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+}
+
+<router-outlet></router-outlet>
+
+@if (!hideLayout){
 <app-footer></app-footer>
+}

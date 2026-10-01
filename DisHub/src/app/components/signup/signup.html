@@ -1,1 +1,57 @@
-<p>signup works!</p>
+<form class="formulaire" id="inscription-form" [formGroup]="signupForm" (ngSubmit)="signup()">
+    <h1>Sign Up</h1>
+
+    <div class="sign_reseau">
+        <a href="#" class="link_reseau"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="link_reseau"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="link_reseau"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    
+    <p>or use your email for registration</p>
+
+    <input type="text" id="signup_name" formControlName="userName" name="signup_name" placeholder="Name" aria-label="input pour le nom" required/>
+    <!-- Message d'erreur -->
+    @if(signupForm.get('userName')?.invalid && (signupForm.get('userName')?.touched || signupForm.get('userName')?.dirty)){
+        @if(signupForm.get('userName')?.errors?.['required']){
+            <div class="text-danger">
+                <p>Ce champs est obligatoire</p>
+            </div>
+        }
+    } 
+
+    <input type="email" id="signup_email" formControlName="email" name="signup_email" placeholder="Email" aria-label="input pour l'email" required/>
+    <!-- Message d'erreur -->
+    @if(signupForm.get('email')?.invalid && (signupForm.get('email')?.touched || signupForm.get('email')?.dirty)){
+        @if(signupForm.get('email')?.errors?.['required']){
+            <div class="text-danger">
+                <p>Ce champs est obligatoire</p>
+            </div>
+        }
+    }
+
+    <input type="password" id="signup_pwd" name="signup_pwd" formControlName="pwd" placeholder="Password" aria-label="input pour le mot de passe" required/>
+    <!-- Message d'erreur -->
+    @if(signupForm.get('pwd')?.invalid && (signupForm.get('pwd')?.touched || signupForm.get('pwd')?.dirty)){
+        @if(signupForm.get('pwd')?.errors?.['required']){
+            <div class="text-danger">
+                <p>Ce champs est obligatoire</p>
+            </div>
+        } 
+    }
+
+    <input type="password" id="signup_confirm_pwd" name="signup_confirm_pwd" formControlName="confirmMdp" placeholder="Confirm your password" aria-label="input pour confirmer le mot de passe" required/>
+    <!-- Message d'erreur -->
+    @if((signupForm.get('confirmMdp')?.touched || signupForm.get('confirmMdp')?.dirty)){
+        @if(signupForm.get('confirmMdp')?.errors?.['required']){
+            <div class="text-danger">
+                <p>Ce champs est obligatoire</p>
+            </div>
+        } @else if (signupForm.hasError('passwordMissmatch')){
+            <div class="text-danger">
+                <p>le mot de passe n'est pas le même</p>
+            </div>
+        }
+    }
+
+    <button type="submit" [disabled]="signupForm.invalid" [class.btn-disabled]="signupForm.invalid" class="btn_sign" aria-label="bouton inscription">Sign Up</button>
+</form>

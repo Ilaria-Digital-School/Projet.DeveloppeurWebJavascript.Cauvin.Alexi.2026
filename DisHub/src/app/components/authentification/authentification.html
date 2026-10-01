@@ -1,8 +1,9 @@
 <main>
-
-    <div id="wrapper_connexion" class="wrapper_connexion">
+    
+    <div id="wrapper_connexion" class="wrapper_connexion" [class.right_panel_active]="inscriptionActive">
         <div class="form_wrapper sign_up">
-            <form>
+            <app-signup></app-signup>
+            <!-- <form>
                 <h1>Sign Up</h1>
                 <div class="sign_reseau">
                     <a href="#" class="link_reseau"><i class="fab fa-facebook-f"></i></a>
@@ -19,11 +20,12 @@
                 <input type="password" id="signup_confirm_pwd" name="signup_confirm_pwd"
                     placeholder="Confirm your password" aria-label="input pour confirmer le mot de passe" />
                 <button class="btn_sign" aria-label="bouton inscription">Sign Up</button>
-            </form>
+            </form> -->
 
         </div>
         <div class="form_wrapper sign_in">
-            <form>
+            <app-signin></app-signin>
+            <!-- <form>
                 <h1>Sign in</h1>
                 <div class="sign_reseau">
                     <a href="#" class="link_reseau"><i class="fab fa-facebook-f"></i></a>
@@ -37,22 +39,23 @@
                     aria-label="input pour mdp" />
                 <a href="#">Forgot your password?</a>
                 <button class="btn_sign" aria-label="bouton connexion">Sign In</button>
-            </form>
+            </form> -->
         </div>
         <div class="overlay_wrapper">
             <div class="overlay">
                 <div class="overlay_panel overlay_left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button id="showSignIn" class="overlay_btn" type="button">Sign In</button>
+                    <button id="showSignIn" class="overlay_btn" type="button" (click)="afficherConnexion()">Sign In</button>
                 </div>
                 <div class="overlay_panel overlay_right">
                     <h1>Hello, Friend!</h1>
                     <p>Enter your personal details and start journey with us</p>
-                    <button id="showSignUp" class="overlay_btn" type="button">Sign Up</button>
+                    <button id="showSignUp" class="overlay_btn" type="button" (click)="afficherInscription()">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
 </main>

@@ -12,17 +12,41 @@
             </div>
 
             <div class="contact_form_wrapper">
-                <form>
-                    <input type="text" id="contact_name" name="contact_name" placeholder="Your name ..."
-                        aria-label="contact name" />
-                    <input type="email" id="contact_email" name="contact_email" placeholder="Your email ..."
-                        aria-label="contact email" />
-                    <input type="text" id="contact_object" name="contact_object" placeholder="object of the mail ..."
-                        aria-label="contact object" />
-                    <textarea name="contact_msg" id="contact_msg" placeholder="Your message ..."
-                        aria-label="contact message"></textarea>
+                <form class="formulaire" id="contact-form" [formGroup]="contactForm" (ngSubmit)="contact()">
+                    <input type="text" id="contact_name" name="contact_name" formControlName="contactName" placeholder="Your name ..." aria-label="contact name" required/>
+                    @if(contactForm.get('contactName')?.invalid && (contactForm.get('contactName')?.touched ||    contactForm.get('contactName')?.dirty)){
+                        @if(contactForm.get('contactName')?.errors?.['required']){
+                            <div class="text-danger">
+                                <p>Ce champs est obligatoire</p>
+                            </div>
+                        }
+                    } 
+                    <input type="email" id="contact_email" name="contact_email" formControlName="contactEmail" placeholder="Your email ..." aria-label="contact email" required/>
+                    @if(contactForm.get('contactEmail')?.invalid && (contactForm.get('contactEmail')?.touched ||       contactForm.get('contactEmail')?.dirty)){
+                        @if(contactForm.get('contactEmail')?.errors?.['required']){
+                            <div class="text-danger">
+                                <p>Ce champs est obligatoire</p>
+                            </div>
+                        }
+                    }
+                    <input type="text" id="contact_object" name="contact_object" formControlName="contactObjet" placeholder="object of the mail ..." aria-label="contact object" required/>
+                    @if(contactForm.get('contactObjet')?.invalid && (contactForm.get('contactObjet')?.touched ||       contactForm.get('contactObjet')?.dirty)){
+                        @if(contactForm.get('contactObjet')?.errors?.['required']){
+                            <div class="text-danger">
+                                <p>Ce champs est obligatoire</p>
+                            </div>
+                        }
+                    }
+                    <textarea name="contact_msg" id="contact_msg" formControlName="contactMsg" placeholder="Your message ..." aria-label="contact message" required></textarea>
+                    @if(contactForm.get('contactMsg')?.invalid && (contactForm.get('contactMsg')?.touched ||        contactForm.get('contactMsg')?.dirty)){
+                        @if(contactForm.get('contactMsg')?.errors?.['required']){
+                            <div class="text-danger">
+                                <p>Ce champs est obligatoire</p>
+                            </div>
+                        }
+                    }
                     <div class="contact_form_btn_submit">
-                        <button type="submit" class="submit_btn" aia-label="submit contact button">Submit</button>
+                        <button type="submit" [disabled]="contactForm.invalid" [class.btn-disabled]="contactForm.invalid" class="submit_btn" aia-label="submit contact button">Submit</button>
                     </div>
                 </form>
             </div>

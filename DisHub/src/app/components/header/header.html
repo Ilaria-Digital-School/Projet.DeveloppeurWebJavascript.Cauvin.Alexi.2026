@@ -11,19 +11,19 @@
     <nav>
         <div class="wrapper_header_nav">
             <div class="header_nav">
-                <a href="../index.html"><img src="/assets/img/logo_dishub.png" alt="logo DisHub"></a>
-                <div class="burger">
+                <a routerLink="/" ><img src="/assets/img/logo_dishub.png" alt="logo DisHub"></a>
+                <div class="burger" [class.active]="menuOuvert" (click)="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <div class="nav_link">
-                <a href="../index.html">Home</a>
-                <a href="/pages/allrecipes.html">Recipe</a>
-                <a href="/pages/contact.html">Contact</a>
+            <div class="nav_link" [class.active]="menuOuvert">
+                <a routerLink="/" (click)="fermerMenu()">Home</a>
+                <a routerLink="/allrecipes" (click)="fermerMenu()">Recipe</a>
+                <a routerLink="/contact" (click)="fermerMenu()">Contact</a>
                 <div class="nav_add_recipe nav_sign">
-                    <a href="pages/create_recipe.html">Add your recipe</a>
+                    <a routerLink="/createRecipes">Add your recipe</a>
                 </div>
             </div>
         </div>
@@ -37,18 +37,25 @@
                 </form>
             </search>
             <div class="wrapper_sign">
+                @if(!getConnectedUser()){
                 <div class="nav_sign">
-                    <a href="/pages/connexion.html">Sign In</a>
+                    <a routerLink="/Authentification">Sign In</a>
                 </div>
                 <div class="nav_sign">
-                    <a href="/pages/connexion.html">Sign Up</a>
+                    <a routerLink="/Authentification">Sign Up</a>
                 </div>
+                }
+                @if(getConnectedUser()){
                 <div class="nav_user_connected hidden">
-                    <a href="/pages/account.html">
-                        <p>username</p>
+                    <a routerLink="/account">
+                        <p>{{getConnectedUser().userName}}</p>
                         <img src="img/profil/profil.png" alt="profile picture">
+                        <button (click)="logoutUser()">
+                            Déconnexion
+                        </button>
                     </a>
                 </div>
+            }
             </div>
         </div>
     </nav>
