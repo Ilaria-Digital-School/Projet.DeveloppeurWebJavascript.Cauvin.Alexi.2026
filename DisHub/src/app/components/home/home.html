@@ -264,53 +264,66 @@
 
     <section id="short_video" class="short_video">
 
-        <!-- ajouter slider -->
-
         <div class="short_text">
             <h2>Our Short</h2>
             <img src="/assets/img/img_titre_recette.png" alt="image titre video">
         </div>
 
         <div class="short_wrapper">
-            <div class="video">
-                <!-- modifier pour ajouter video -->
-                <img src="/assets/img/img_video.png" alt="futur video">
-                <div class="card_favori video_favori">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-            </div>
 
-            <div class="video">
-                <!-- modifier pour ajouter video -->
-                <img src="/assets/img/img_video.png" alt="futur video">
-                <div class="card_favori video_favori">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-            </div>
+            <owl-carousel-o [options]="carouselOptions">
 
-            <div class="video">
-                <!-- modifier pour ajouter video -->
-                <img src="/assets/img/img_video.png" alt="futur video">
-                <div class="card_favori video_favori">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-            </div>
+                <ng-template carouselSlide>
+                    <div class="video">
+                        <img src="/assets/img/img_video.png" alt="futur video">
 
-            <div class="video">
-                <!-- modifier pour ajouter video -->
-                <img src="/assets/img/img_video.png" alt="futur video">
-                <div class="card_favori video_favori">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-            </div>
+                        <div class="card_favori video_favori">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </ng-template>
 
-            <div class="video">
-                <!-- modifier pour ajouter video -->
-                <img src="/assets/img/img_video.png" alt="futur video">
-                <div class="card_favori video_favori">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-            </div>
+                <ng-template carouselSlide>
+                    <div class="video">
+                        <img src="/assets/img/img_video.png" alt="futur video">
+
+                        <div class="card_favori video_favori">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </ng-template>
+
+                <ng-template carouselSlide>
+                    <div class="video">
+                        <img src="/assets/img/img_video.png" alt="futur video">
+
+                        <div class="card_favori video_favori">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </ng-template>
+
+                <ng-template carouselSlide>
+                    <div class="video">
+                        <img src="/assets/img/img_video.png" alt="futur video">
+
+                        <div class="card_favori video_favori">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </ng-template>
+
+                <ng-template carouselSlide>
+                    <div class="video">
+                        <img src="/assets/img/img_video.png" alt="futur video">
+
+                        <div class="card_favori video_favori">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </ng-template>
+
+            </owl-carousel-o>
 
         </div>
 

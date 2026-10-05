@@ -416,30 +416,29 @@ search form button{
 }
 
 .wrapper_tag{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin: 35px 10%;;
 }
 
-.tag{
-    margin: 0 25px;
+.tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
     cursor: pointer;
 }
 
-.tag:first-child{
-    margin-left: 0;
-}
-
-.tag:last-child{
-    margin-right: 0;
-}
-
-.tag img{
+.tag img {
+    display: block;
     padding: 15px;
     border-radius: 15px;
-    width: 50px;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.4);
+    width: 50px !important;
+    height: 50px;
+    object-fit: contain;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
 .tag img:hover{
@@ -450,7 +449,8 @@ search form button{
     background-color: #EF872D;
 }
 
-.tag h3{
+.tag h3 {
+    margin-top: 10px;
     text-align: center;
     font-weight: 600;
     font-size: 25px;
@@ -579,9 +579,9 @@ search form button{
 }
 
 .short_wrapper{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     gap: 25px;
     margin-top: 50px;
 }
@@ -1376,6 +1376,10 @@ footer{
     margin-left: 25px;
 }
 
+._name{
+    margin-left: 0;
+}
+
 .infos_input label{
     margin-bottom: 10px;
     font-size: 18px;
@@ -1441,7 +1445,6 @@ footer{
 
 .input_ingredient{
     display: flex;
-    flex-direction: column;
     width: 15%;
     margin: 20px 0;
 }
@@ -1470,6 +1473,7 @@ footer{
     font-weight: 500;
     font-size: 18px;
     width: auto;
+    height: 50px;
     text-align: center;
     color: #EF872D;
     box-shadow: 0px 4px 4px 0px #ababab;
@@ -1505,8 +1509,8 @@ footer{
 }
 
 .add_tag_recipe_wrapper{
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     margin: 25px 0;
 }
 
@@ -1526,7 +1530,13 @@ footer{
     font-weight: 600;
     font-size: 20px;
     color: #EF872D;
+    cursor: pointer;
 }
+
+.publish_recipe button:hover{
+    background-color: #EF872D;
+    color: white;
+}   
 
 /**** ****/
 
@@ -2523,9 +2533,9 @@ footer{
         min-width: 250px;
     }
 
-    .add_tag_recipe_wrapper{
+    /* .add_tag_recipe_wrapper{
         flex-wrap: wrap;
-    }
+    } */
 
     /**** ****/
 
