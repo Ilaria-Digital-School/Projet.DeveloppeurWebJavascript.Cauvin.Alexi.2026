@@ -3,7 +3,7 @@
     <section id="the_recipe" class="the_recipe">
 
         <div class="img_the_recipe">
-            <img src="../img/img_recipe.png" alt="image of the recipe">
+            <img [src]="recipe.img" alt="image of the recipe">
         </div>
 
         <div class="card_the_recipe">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="intro_the_recipe">
-                <h1 class="title_the_recipe">Pâtes Carbonara </h1>
+                <h1 class="title_the_recipe">{{recipe.name}}</h1>
                 <p>By Patrick Patric</p>
                 <div class="rate_the_recipe" aria-label="rating button">
                     <i class="fa-solid fa-star"></i>
@@ -34,45 +34,46 @@
             <div class="wrapper_infos_the_recipe">
                 <div class="time_the_recipe item_infos_the_recipe">
                     <div class="card_infos_the_recipe">
-                        <img src="../img/icon_create_recipe/icon_time.png" alt="icon time of the recipe">
+                        <img src="/assets/img/icon_create_recipe/icon_time.png" alt="icon time of the recipe">
                     </div>
-                    <p>30mn</p>
+                    <p>{{recipe.time}}mn</p>
                 </div>
                 <div class="users_the_recipe item_infos_the_recipe">
                     <div class="card_infos_the_recipe ">
-                        <img src="../img/icon_create_recipe/icon_people.png" alt="icon number of users of the recipe">
+                        <img src="/assets/img/icon_create_recipe/icon_people.png" alt="icon number of users of the recipe">
                     </div>
-                    <p>4 peoples</p>
+                    <p>{{recipe.people}} peoples</p>
                 </div>
                 <div class="kcal_the_recipe item_infos_the_recipe">
                     <div class="card_infos_the_recipe">
-                        <img src="../img/icon_create_recipe/icon_kcal.png" alt="icon number of kcal of the recipe">
+                        <img src="/assets/img/icon_create_recipe/icon_kcal.png" alt="icon number of kcal of the recipe">
                     </div>
-                    <p>500 Kcal</p>
+                    <p>{{recipe.kcal}}Kcal</p>
                 </div>
                 <div class="diff_the_recipe item_infos_the_recipe">
                     <div class="card_infos_the_recipe">
-                        <img src="../img/icon_create_recipe/iocn_difficulties.png"
+                        <img src="/assets/img/icon_create_recipe/iocn_difficulties.png"
                             alt="icon Difficulties of the recipe">
                     </div>
-                    <p>Easy</p>
+                    <p>{{recipe.difficulty}}</p>
                 </div>
             </div>
 
             <div class="ingredient_the_recipe">
                 <div class="ingredient_title_the_recipe">
                     <div class="card_title_icon_ingredient">
-                        <img src="../img/icon_ingredient.png" alt="icon of the section of ingredients">
+                        <img src="/assets/img/icon_ingredient.png" alt="icon of the section of ingredients">
                     </div>
                     <h2>Ingredients</h2>
                 </div>
 
                 <div class="list_ingredient_the_recipe">
                     <ul>
-                        <li class="item_list_ingredient">3 oeufs</li>
-                        <li class="item_list_ingredient">500gr of Spagethi</li>
-                        <li class="item_list_ingredient">150gr of Guancale</li>
-                        <li class="item_list_ingredient">300gr of Pecorino Romano</li>
+                        @for (ingredient of recipe.ingredients; track $index) {
+                            <li class="item_list_ingredient">
+                                {{ ingredient }}
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -80,43 +81,13 @@
             <div class="instruction_the_recipe">
                 <div class="instruction_title_the_recipe">
                     <div class="card_title_icon_ingredient">
-                        <img src="../img/icon_instruction.png" alt="icon of the section of the instruction">
+                        <img src="/assets/img/icon_instruction.png" alt="icon of the section of the instruction">
                     </div>
                     <h2>Instructions</h2>
                 </div>
                 <div class="text_instruction_the_recipe">
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi
-                        nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam
-                        fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
-                        nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima
-                        dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis,
-                        exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a
-                        nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat
-                        excepturi nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic
-                        quibusdam fuga, tenetur adipisci a nisi.
-                        <br /><br />
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi
-                        nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam
-                        fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
-                        nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima
-                        dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.
-                        <br /><br />
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi
-                        nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam
-                        fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
-                        nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima
-                        dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet
-                        consectetur adipisicing elit. Quam nobis molestias fugiat excepturi nihil deserunt corporis,
-                        exercitationem maiores illum id minima dolorum ullam hic quibusdam fuga, tenetur adipisci a
-                        nisi.
-                        <br /><br />
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam nobis molestias fugiat excepturi
-                        nihil deserunt corporis, exercitationem maiores illum id minima dolorum ullam hic quibusdam
-                        fuga, tenetur adipisci a nisi.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
-                        nobis molestias fugiat excepturi nihil deserunt corporis, exercitationem maiores illum id minima
-                        dolorum ullam hic quibusdam fuga, tenetur adipisci a nisi.
+                        {{recipe.instructions}}
                     </p>
                 </div>
             </div>
@@ -140,7 +111,7 @@
     <section id="comments_the_recipe" class="comments_the_recipe">
 
         <div class="title_comments_the_recipe">
-            <img src="../img/img_title_comments.png" alt="image title comments">
+            <img src="/assets/img/img_title_comments.png" alt="image title comments">
             <h3>Comments</h3>
         </div>
 
@@ -149,7 +120,7 @@
             <div class="card_comments">
                 <div class="card_comments_header">
                     <div class="avatar">
-                        <img src="../img/profil/profil.png" alt="avatar">
+                        <img src="/assets/img/profil/profil.png" alt="avatar">
                     </div>
                     <div class="user_infos_comments">
                         <p>Name User</p>
@@ -182,67 +153,27 @@
     <section id="more_recipes" class="more_recipes">
 
         <div class="title_more_recipes">
-            <img src="../img/img_titre_recette.png" alt="image more recipe">
+            <img src="/assets/img/img_titre_recette.png" alt="image more recipe">
             <h3>More Recipes</h3>
         </div>
 
         <div class="wrapper_more_recipes">
-            <a href="#" class="card_recette">
-                <div class="card_img">
-                    <img src="../img/recettes/img_recette.png" alt="photo de la recette">
-                </div>
-                <div class="card_favori" aria-label="favori button">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-                <div class="card_note" aria-label="rating button">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <div class="card_text">
-                    <h2>Titre de la recette</h2>
-                    <p>Auteur de la recette</p>
-                </div>
-            </a>
 
-            <a href="#" class="card_recette">
-                <div class="card_img">
-                    <img src="../img/recettes/img_recette.png" alt="photo de la recette">
-                </div>
-                <div class="card_favori" aria-label="favori button">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-                <div class="card_note" aria-label="rating button">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <div class="card_text">
-                    <h2>Titre de la recette</h2>
-                    <p>Auteur de la recette</p>
-                </div>
-            </a>
+            <owl-carousel-o [options]="recipeCarouselOptions">
 
-            <a href="#" class="card_recette">
-                <div class="card_img">
-                    <img src="../img/recettes/img_recette.png" alt="photo de la recette">
-                </div>
-                <div class="card_favori" aria-label="favori button">
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-                <div class="card_note" aria-label="rating button">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <div class="card_text">
-                    <h2>Titre de la recette</h2>
-                    <p>Auteur de la recette</p>
-                </div>
-            </a>
+                @for (recipeItem of recipes; track recipeItem._id) {
+
+                    <ng-template carouselSlide>
+
+                        <app-recipe-card
+                            [recipeInput]="recipeItem">
+                        </app-recipe-card>
+
+                    </ng-template>
+
+                }
+
+            </owl-carousel-o>
 
         </div>
 

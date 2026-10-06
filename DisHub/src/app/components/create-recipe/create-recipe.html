@@ -33,7 +33,7 @@
                     </div>
                     <div class="infos_input">
                         <label for="time">Time of prepartion</label>
-                        <input type="text" name="time" id="recipeTime" [(ngModel)]="recipe.time" placeholder="Time ..."
+                        <input type="number" name="time" id="recipeTime" [(ngModel)]="recipe.time" placeholder="Time ..."
                             #recipeTime="ngModel" required>
                         @if (recipeTime.invalid && (recipeTime.touched) || (recipeTime.dirty)) {
                             @if(recipeTime.errors?.['required']){

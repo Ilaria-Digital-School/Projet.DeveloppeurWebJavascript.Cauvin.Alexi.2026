@@ -1,6 +1,6 @@
-<a href="#" class="card_recette">
+<a [routerLink]="['/recipeDetails', recipeInput._id]" class="card_recette">
     <div class="card_img">
-        <img src="/assets/img/recettes/img_recette.png" alt="photo de la recette">
+        <img [src]="recipeInput.img" alt="photo de la recette">
     </div>
     <div class="card_favori" aria-label="favori button">
         <i class="fa-regular fa-heart"></i>
@@ -12,7 +12,7 @@
         <i class="fa-regular fa-star"></i>
     </div>
     <div class="card_text">
-        <h2>Titre de la recette</h2>
+        <h2>{{ recipeInput.name}}</h2>
         <p>Auteur de la recette</p>
     </div>
 </a>

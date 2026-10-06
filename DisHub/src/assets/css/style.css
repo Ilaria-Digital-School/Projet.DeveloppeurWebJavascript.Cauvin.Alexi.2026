@@ -172,6 +172,7 @@ search form button{
     border: 3px solid #EF872D;
     border-radius: 25px;
     text-align: center;
+    cursor: pointer;
 }
 
 .nav_sign a{

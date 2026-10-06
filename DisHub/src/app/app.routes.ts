@@ -12,7 +12,7 @@ export const routes: Routes = [
     {path: 'Authentificiation', component: Authentification, data: {hideLayout: true}},
     {path: 'Allrecipes', component: AllRecipes},
     {path: 'Account', component: Account},
-    {path: 'RecipeDetails', component: RecipeDetails},
+    {path: 'RecipeDetails/:id', component: RecipeDetails},
     {path: 'createRecipe', component: CreateRecipe},
     {path: 'contact', component: Contact},
 ];
