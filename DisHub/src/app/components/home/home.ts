@@ -4,10 +4,11 @@ import { Footer } from '../footer/footer';
 import { RecipeCard } from '../recipe-card/recipe-card';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { RecipeService } from '../../services/recipe-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [RecipeCard, CarouselModule],
+  imports: [RecipeCard, CarouselModule, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
